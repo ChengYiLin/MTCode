@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import styled from 'styled-components'
 
-const Wrapper = styled.footer`
+const Wrapper = styled.header`
   flex: 0 0 56px;
   background: greenyellow;
 `
