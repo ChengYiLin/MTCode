@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import styled from 'styled-components'
-import Layout from '@components/Layout'
+import Layout from 'Layout'
 
 const Title = styled.h1`
   font-size: 1.5em;
