@@ -1,14 +1,7 @@
 import Head from 'next/head'
+import Layout, { MainContaier, Main, Aside } from 'Layout'
 import Link from 'next/link'
 import Image from 'next/image'
-import styled from 'styled-components'
-import Layout from 'Layout'
-
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
-`
 
 export default function FirstPost() {
   return (
@@ -16,14 +9,19 @@ export default function FirstPost() {
       <Head>
         <title>First Post</title>
       </Head>
-      <Title>First Post</Title>
-      <Image
-        src="/images/view.jpeg"
-        width={400}
-        height={400}
-        alt="Hello world"
-      />
-      <Link href="/">Go Back</Link>
+      <MainContaier>
+        <Main>
+          <p>First Post</p>
+          <Image
+            src="/images/view.jpeg"
+            width={400}
+            height={400}
+            alt="Hello world"
+          />
+          <Link href="/">Go Back</Link>
+        </Main>
+        <Aside>This is ASIDE</Aside>
+      </MainContaier>
     </Layout>
   )
 }

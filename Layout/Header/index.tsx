@@ -1,13 +1,11 @@
 import { FC } from 'react'
-import styled from 'styled-components'
-
-const Wrapper = styled.header`
-  flex: 0 0 56px;
-  background: greenyellow;
-`
 
 const Header: FC = () => {
-  return <Wrapper>This is Header</Wrapper>
+  return (
+    <header className="h-14 bg-green-600">
+      <div className="flex max-w-screen-xl mx-auto py-2 h-full">Header</div>
+    </header>
+  )
 }
 
 export default Header
