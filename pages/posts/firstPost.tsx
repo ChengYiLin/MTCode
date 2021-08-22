@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Layout, { MainContaier, Main, Aside } from 'Layout'
+import Layout, { MainContaier, Main, Aside } from '@Layout'
 import Link from 'next/link'
 import Image from 'next/image'
 

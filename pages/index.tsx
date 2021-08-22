@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Layout, { MainContaier, Main, Aside } from 'Layout'
+import Layout, { MainContaier, Main, Aside } from '@Layout'
 
 export default function Home() {
   return (
