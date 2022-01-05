@@ -25,14 +25,14 @@ const getScrollPosition = () => {
 };
 
 const useScrollPosition = (
-    onScollCallBack: (props: IScrollProps) => void,
+    onScrollCallBack: (props: IScrollProps) => void,
     dependency: DependencyList
 ) => {
     const position = useRef(getScrollPosition());
 
     const handleScroll = () => {
         const currentPosition = getScrollPosition();
-        onScollCallBack({
+        onScrollCallBack({
             prevPos: position.current,
             currPos: currentPosition,
         });
