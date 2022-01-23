@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import React from 'react';
-import Header from '../../components/header';
+import Header from '../../src/components/header';
 
 const HeaderLayout: FC = ({ children }) => {
     return (
