@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import { useState } from 'react';
 // import { useRouter } from 'next/router';
+import Link from 'next/link';
 import Image from 'next/image';
 import useScrollPosition from '../../hooks/useScrollPosition';
 
@@ -41,15 +42,12 @@ const Header: FC = () => {
                     </div>
                     {/* Desktop NavBar */}
                     <nav className="hidden md:flex items-center font-bold text-white">
-                        <a href="#Section1" className="px-4">
-                            Home
-                        </a>
-                        <a href="#Section2" className="px-4">
-                            Work
-                        </a>
-                        <a href="#Section3" className="px-4">
-                            Project
-                        </a>
+                        <Link href="/">
+                            <a className="px-4">Home</a>
+                        </Link>
+                        <Link href="/blog">
+                            <a className="px-4">Blog</a>
+                        </Link>
                     </nav>
                     {/* Mobile Hamburger */}
                     <div className="block md:hidden">

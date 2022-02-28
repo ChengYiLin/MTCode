@@ -6,7 +6,7 @@ const Home: NextPage = () => {
         <HeaderLayout>
             <section
                 id="Section1"
-                className="h-screen box-border py-16 flex justify-center items-center"
+                className="h-screen box-border flex justify-center items-center"
             >
                 <div className="text-white text-center">
                     <p className="text-3xl leading-relaxed ">嗨 !</p>

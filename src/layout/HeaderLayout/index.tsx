@@ -6,7 +6,7 @@ const HeaderLayout: FC = ({ children }) => {
     return (
         <>
             <Header />
-            {children}
+            <main className="pt-16">{children}</main>
         </>
     );
 };
