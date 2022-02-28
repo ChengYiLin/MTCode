@@ -8,8 +8,6 @@ module.exports = {
         'plugin:react/recommended',
         'plugin:react-hooks/recommended',
         'next/core-web-vitals',
-        'plugin:@next/next/recommended',
-        'next',
         'prettier',
     ],
     parser: '@typescript-eslint/parser',
@@ -22,6 +20,6 @@ module.exports = {
     },
     plugins: ['react', '@typescript-eslint'],
     rules: {
-        dirs: ['pages', 'components'],
-    },
+        "require-jsdoc": "off",
+    }
 };
