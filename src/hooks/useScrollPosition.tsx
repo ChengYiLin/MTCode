@@ -1,4 +1,3 @@
-import type { DependencyList } from 'react';
 import { useRef, useEffect } from 'react';
 
 interface IPosition {
@@ -24,29 +23,27 @@ const getScrollPosition = () => {
     };
 };
 
-const useScrollPosition = (
-    onScrollCallBack: (props: IScrollProps) => void,
-    dependency: DependencyList
-) => {
+const useScrollPosition = (onScrollCallBack: (props: IScrollProps) => void) => {
     const position = useRef(getScrollPosition());
 
-    const handleScroll = () => {
-        const currentPosition = getScrollPosition();
-        onScrollCallBack({
-            prevPos: position.current,
-            currPos: currentPosition,
-        });
-
-        position.current = currentPosition;
-    };
-
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-    }, dependency);
+        const handleScroll = () => {
+            const currentPosition = getScrollPosition();
 
-    return () => {
-        window.removeEventListener('scroll', handleScroll);
-    };
+            onScrollCallBack({
+                prevPos: position.current,
+                currPos: currentPosition,
+            });
+
+            position.current = currentPosition;
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [onScrollCallBack]);
 };
 
 export default useScrollPosition;

@@ -9,12 +9,9 @@ const Header: FC = () => {
     // const router = useRouter();
     const [isOverHeader, setIsOverHeader] = useState(false);
 
-    useScrollPosition(
-        ({ currPos }) => {
-            setIsOverHeader(currPos.y < -60);
-        },
-        [setIsOverHeader]
-    );
+    useScrollPosition(({ currPos }) => {
+        setIsOverHeader(currPos.y < -60);
+    });
 
     return (
         <header className="relative">
