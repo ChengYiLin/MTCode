@@ -20,7 +20,7 @@ class MyDocument extends Document {
                         rel="stylesheet"
                     />
                 </Head>
-                <body className="bg-zinc-900">
+                <body>
                     <Main />
                     <NextScript />
                 </body>
