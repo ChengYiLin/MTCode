@@ -1,5 +1,6 @@
 import type { FC, ReactNode } from "react";
-import { Fragment } from "react";
+import Header from "./Header";
+import Footer from "./Footer";
 
 interface ILayout {
     children: ReactNode;
@@ -7,11 +8,11 @@ interface ILayout {
 
 const Layout: FC<ILayout> = ({ children }) => {
     return (
-        <Fragment>
-            <header className="bg-indigo-500">This is header</header>
-            {children}
-            <footer className="bg-fuchsia-400">This is footer</footer>
-        </Fragment>
+        <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="grow basis-full">{children}</main>
+            <Footer />
+        </div>
     );
 };
 
