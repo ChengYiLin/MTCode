@@ -1,5 +1,6 @@
-import { FC, useEffect, useState } from "react";
-import { FiSun, FiMoon } from "react-icons/fi";
+import { FC } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
+import DarkModeButton from "./darkModeButton/DarkModeButton";
 
 const navItemsList = [
     {
@@ -11,25 +12,17 @@ const navItemsList = [
 ];
 
 const Header: FC = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
-
-    useEffect(() => {
-        const htmlTag = document.getElementsByTagName("html")[0];
-
-        isDarkMode
-            ? htmlTag.classList.add("dark")
-            : htmlTag.classList.remove("dark");
-    }, [isDarkMode]);
-
     return (
-        <header className="fixed top-0 left-0 right-0 h-14 dark:bg-gray-800">
-            <div className="container mx-auto h-full flex">
+        <header className="fixed top-0 left-0 right-0 h-14 bg-white dark:bg-gray-800">
+            <div className="container mx-auto h-full flex px-4 sm:px-0">
+                {/* Logo */}
                 <div className="flex items-center">
-                    <h1 className="font-extrabold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500">
+                    <h1 className="font-extrabold text-xl text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500 sm:text-2xl">
                         Martin Code
                     </h1>
                 </div>
-                <div className="ml-auto flex items-center">
+                {/* Desktop Nav */}
+                <div className="hidden ml-auto items-center sm:flex">
                     <nav>
                         <ul className="flex">
                             {navItemsList.map((navItem) => (
@@ -43,17 +36,13 @@ const Header: FC = () => {
                         </ul>
                     </nav>
                 </div>
-                <div className="flex items-center">
-                    <div
-                        className="p-2.5 border rounded-full cursor-pointer dark:bg-gray-700 dark:border-none"
-                        onClick={() => setIsDarkMode((prev) => !prev)}
-                    >
-                        {isDarkMode ? (
-                            <FiMoon className="text-xl text-white hover:text-amber-200" />
-                        ) : (
-                            <FiSun className="text-xl hover:text-orange-400" />
-                        )}
-                    </div>
+                {/* Dark Mode Button */}
+                <div className="ml-auto flex items-center sm:ml-0">
+                    <DarkModeButton />
+                </div>
+                {/* TODO: Mobile Nav */}
+                <div className="flex items-center pl-6 sm:hidden">
+                    <GiHamburgerMenu className="text-xl" />
                 </div>
             </div>
         </header>
