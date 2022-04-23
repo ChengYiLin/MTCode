@@ -8,9 +8,6 @@ const navItemsList = [
     {
         navItemNode: "Blog",
     },
-    {
-        navItemNode: "Contact",
-    },
 ];
 
 const Header: FC = () => {
@@ -25,7 +22,7 @@ const Header: FC = () => {
     }, [isDarkMode]);
 
     return (
-        <header className="h-14">
+        <header className="fixed top-0 left-0 right-0 h-14 dark:bg-gray-800">
             <div className="container mx-auto h-full flex">
                 <div className="flex items-center">
                     <h1 className="font-extrabold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500">
@@ -38,7 +35,7 @@ const Header: FC = () => {
                             {navItemsList.map((navItem) => (
                                 <li
                                     key={navItem.navItemNode}
-                                    className="font-bold px-6 cursor-pointer hover:text-rose-400"
+                                    className="font-bold px-6 cursor-pointer text-emerald-500 dark:text-neutral-50"
                                 >
                                     {navItem.navItemNode}
                                 </li>
@@ -48,13 +45,13 @@ const Header: FC = () => {
                 </div>
                 <div className="flex items-center">
                     <div
-                        className="p-2.5 border rounded-full cursor-pointer dark:bg-slate-600"
+                        className="p-2.5 border rounded-full cursor-pointer dark:bg-gray-700 dark:border-none"
                         onClick={() => setIsDarkMode((prev) => !prev)}
                     >
                         {isDarkMode ? (
-                            <FiMoon className="text-xl dark:text-white" />
+                            <FiMoon className="text-xl text-white hover:text-amber-200" />
                         ) : (
-                            <FiSun className="text-xl" />
+                            <FiSun className="text-xl hover:text-orange-400" />
                         )}
                     </div>
                 </div>
