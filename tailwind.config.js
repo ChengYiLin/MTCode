@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
     darkMode: "class",
     content: [
@@ -6,6 +9,13 @@ module.exports = {
     ],
     theme: {
         extend: {
+            fontFamily: {
+                sans: [
+                    "Noto Sans Display",
+                    "Noto Serif TC",
+                    ...defaultTheme.fontFamily.sans,
+                ],
+            },
             height: {
                 "75vh": "75vh",
             },
