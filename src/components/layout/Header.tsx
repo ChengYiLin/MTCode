@@ -1,13 +1,20 @@
 import { FC } from "react";
+import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import DarkModeButton from "./darkModeButton/DarkModeButton";
 
 const navItemsList = [
     {
         navItemNode: "Home",
+        link: "/",
     },
     {
         navItemNode: "Blog",
+        link: "/blog",
+    },
+    {
+        navItemNode: "About",
+        link: "/about",
     },
 ];
 
@@ -28,9 +35,11 @@ const Header: FC = () => {
                             {navItemsList.map((navItem) => (
                                 <li
                                     key={navItem.navItemNode}
-                                    className="font-bold px-6 cursor-pointer text-emerald-500 dark:text-neutral-50"
+                                    className="font-bold px-6 cursor-pointer text-emerald-500 dark:text-neutral-50 hover:dark:text-neutral-400"
                                 >
-                                    {navItem.navItemNode}
+                                    <Link href={navItem.link}>
+                                        <a>{navItem.navItemNode}</a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
