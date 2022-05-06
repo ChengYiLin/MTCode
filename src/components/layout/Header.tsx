@@ -21,21 +21,21 @@ const navItemsList = [
 const Header: FC = () => {
     return (
         <header className="fixed top-0 left-0 right-0 h-14 bg-white dark:bg-gray-800">
-            <div className="container mx-auto h-full flex px-4 sm:px-0">
+            <div className="container mx-auto flex h-full px-4 sm:px-0">
                 {/* Logo */}
                 <div className="flex items-center">
-                    <h1 className="font-black text-xl sm:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 dark:from-emerald-400 dark:to-cyan-500">
+                    <h1 className="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-xl font-black text-transparent dark:from-emerald-400 dark:to-cyan-500 sm:text-2xl">
                         Martin Code
                     </h1>
                 </div>
                 {/* Desktop Nav */}
-                <div className="hidden ml-auto items-center sm:flex">
+                <div className="ml-auto hidden items-center sm:flex">
                     <nav>
                         <ul className="flex">
                             {navItemsList.map((navItem) => (
                                 <li
                                     key={navItem.navItemNode}
-                                    className="font-bold px-6 cursor-pointer text-emerald-500 dark:text-neutral-50 hover:dark:text-neutral-400"
+                                    className="cursor-pointer px-6 font-bold text-emerald-500 dark:text-neutral-50 hover:dark:text-neutral-400"
                                 >
                                     <Link href={navItem.link}>
                                         <a>{navItem.navItemNode}</a>

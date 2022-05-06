@@ -14,7 +14,7 @@ const DarkModeButton: FC = () => {
 
     return (
         <div
-            className="p-2.5 border border-emerald-500 rounded-full cursor-pointer dark:bg-gray-700 dark:border-none"
+            className="cursor-pointer rounded-full border border-emerald-500 p-2.5 dark:border-none dark:bg-gray-700"
             onClick={() => setIsDarkMode((prev) => !prev)}
         >
             {isDarkMode ? (
