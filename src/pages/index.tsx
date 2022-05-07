@@ -1,10 +1,11 @@
 import type { NextPage } from "next";
-import Layout from "@components/layout/Layout";
+
 import Wave from "@asset/images/wave.svg";
+import { Fragment } from "react";
 
 const Home: NextPage = () => {
     return (
-        <Layout>
+        <Fragment>
             {/* Who I am */}
             <div className="relative h-75vh max-h-[800px] bg-gradient-to-b from-white to-emerald-100 p-4 dark:from-gray-800 dark:to-cyan-800">
                 <div className="container mx-auto flex h-full items-center bg-contain bg-right-bottom bg-no-repeat py-32 sm:bg-hero-pattern sm:px-16">
@@ -28,7 +29,7 @@ const Home: NextPage = () => {
                     <Wave />
                 </div>
             </div>
-        </Layout>
+        </Fragment>
     );
 };
 
