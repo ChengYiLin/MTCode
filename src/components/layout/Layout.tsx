@@ -8,7 +8,7 @@ interface ILayout {
 
 const Layout: FC<ILayout> = ({ children }) => {
     return (
-        <div className="relative flex min-h-screen flex-col">
+        <div className="relative flex min-h-screen select-none flex-col">
             <Header />
             <main className="grow basis-full pt-14">{children}</main>
             <Footer />

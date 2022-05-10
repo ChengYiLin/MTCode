@@ -8,8 +8,8 @@ const Home: NextPage = () => {
         <Fragment>
             {/* Who I am */}
             <div className="relative h-75vh max-h-[800px] bg-gradient-to-b from-white to-emerald-100 p-4 dark:from-gray-800 dark:to-cyan-800">
-                <div className="container mx-auto flex h-full items-center bg-contain bg-right-bottom bg-no-repeat py-32 sm:bg-hero-pattern sm:px-16">
-                    <div className="max-w-[500px] select-none">
+                <div className="container mx-auto flex h-full items-center bg-cover bg-right-bottom bg-no-repeat py-32 sm:bg-hero-pattern sm:px-16">
+                    <div className="max-w-[500px]">
                         <div className="px-4 dark:text-white">
                             <h1 className="text-6xl sm:text-7xl">
                                 <span className="mb-8 block">Hello!</span>
