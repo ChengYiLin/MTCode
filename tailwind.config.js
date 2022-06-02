@@ -9,9 +9,6 @@ module.exports = {
     ],
     theme: {
         extend: {
-            backgroundImage: {
-                "hero-pattern": "url('/images/heroPattern.svg')",
-            },
             fontFamily: {
                 sans: [
                     "Noto Sans Display",
