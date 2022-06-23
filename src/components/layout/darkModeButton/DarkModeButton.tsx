@@ -14,13 +14,13 @@ const DarkModeButton: FC = () => {
 
     return (
         <div
-            className="cursor-pointer rounded-full border border-emerald-500 p-2.5 dark:border-none dark:bg-gray-700"
+            className="cursor-pointer rounded-full bg-teal-100 p-2.5 dark:bg-gray-700"
             onClick={() => setIsDarkMode((prev) => !prev)}
         >
             {isDarkMode ? (
-                <FiMoon className="text-xl text-white hover:text-amber-200" />
+                <FiMoon className="text-nav-color text-xl" />
             ) : (
-                <FiSun className="text-xl text-emerald-400 hover:text-orange-400" />
+                <FiSun className="text-nav-color text-xl" />
             )}
         </div>
     );

@@ -6,4 +6,16 @@
     .text-gradient-color {
         @apply bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent dark:from-emerald-400 dark:to-cyan-500;
     }
+
+    .bg-dark {
+        @apply bg-cyan-800;
+    }
+
+    .bg-light {
+        @apply bg-slate-100;
+    }
+
+    .text-nav-color {
+        @apply text-neutral-900 hover:text-neutral-500 dark:text-slate-100  hover:dark:text-amber-200;
+    }
 }

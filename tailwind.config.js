@@ -16,9 +16,6 @@ module.exports = {
                     ...defaultTheme.fontFamily.sans,
                 ],
             },
-            height: {
-                "75vh": "75vh",
-            },
         },
     },
     plugins: [],
