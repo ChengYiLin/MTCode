@@ -24,7 +24,7 @@ const Header: FC = () => {
             <div className="container mx-auto flex h-full px-4 sm:px-0">
                 {/* Logo */}
                 <div className="flex items-center">
-                    <h1 className="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-xl font-black text-transparent dark:from-emerald-400 dark:to-cyan-500 sm:text-2xl">
+                    <h1 className=" text-gradient-color text-xl font-bold sm:text-2xl">
                         Martin Code
                     </h1>
                 </div>

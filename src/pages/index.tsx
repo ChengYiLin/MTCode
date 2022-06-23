@@ -14,7 +14,7 @@ const Home: NextPage = () => {
                             <h1 className="text-4xl sm:text-7xl">
                                 <span className="mb-8 block">Hello!</span>
                                 I&apos;m{" "}
-                                <span className="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text font-bold text-transparent dark:from-emerald-400 dark:to-cyan-500">
+                                <span className="text-gradient-color font-bold">
                                     Martin
                                 </span>
                                 ,
