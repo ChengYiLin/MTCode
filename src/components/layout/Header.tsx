@@ -20,7 +20,7 @@ const navItemsList = [
 
 const Header: FC = () => {
     return (
-        <header className="fixed top-0 left-0 right-0 h-16 bg-teal-300 dark:bg-gray-800">
+        <header className="fixed top-0 left-0 right-0 h-16 bg-transparent">
             <div className="container mx-auto flex h-full px-4 sm:px-0">
                 {/* Logo */}
                 <div className="flex items-center">
