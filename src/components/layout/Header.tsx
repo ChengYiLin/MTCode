@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, Fragment, useState } from "react";
 import Link from "next/link";
 import HamburgerMenu from "../HamburgerMenu";
 
@@ -21,12 +21,12 @@ const Header: FC = () => {
     const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
 
     return (
-        <header className="sticky top-0 left-0 right-0 h-16 bg-transparent shadow-sm">
+        <header className="bg-light sticky top-0 left-0 right-0 h-16 shadow-sm">
             <div className="container mx-auto flex h-full px-4 sm:px-0">
                 {/* Logo */}
                 <div className="flex items-center">
                     <h1 className="text-gradient-color text-2xl font-bold">
-                        Martin Lin
+                        <Link href="/">Martin Lin</Link>
                     </h1>
                 </div>
                 {/* Desktop Nav */}
@@ -36,7 +36,7 @@ const Header: FC = () => {
                             {navItemsList.map((navItem) => (
                                 <li
                                     key={navItem.navItemNode}
-                                    className="cursor-pointer px-6 font-bold text-neutral-900"
+                                    className="text-md cursor-pointer px-6 hover:font-bold"
                                 >
                                     <Link href={navItem.link}>
                                         <a>{navItem.navItemNode}</a>
@@ -54,6 +54,28 @@ const Header: FC = () => {
                         />
                     </div>
                 </div>
+            </div>
+            {/* Mobile Nav */}
+            <div
+                className={`absolute inset-x-0 h-[calc(100vh-64px)] bg-slate-50 ${
+                    isOpenMobileMenu ? "block" : "hidden"
+                }`}
+            >
+                <nav className="container mx-auto px-4">
+                    <ul>
+                        {navItemsList.map((navItem) => (
+                            <li
+                                key={navItem.navItemNode}
+                                className="my-6 cursor-pointer text-xl font-bold"
+                                onClick={() => setIsOpenMobileMenu(false)}
+                            >
+                                <Link href={navItem.link}>
+                                    <a>{navItem.navItemNode}</a>
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
             </div>
         </header>
     );

@@ -7,10 +7,6 @@
         @apply bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent;
     }
 
-    .bg-dark {
-        @apply bg-cyan-800;
-    }
-
     .bg-light {
         @apply bg-slate-100;
     }

@@ -2,7 +2,7 @@
     width: 36px;
     height: 3px;
     display: block;
-    background: #666666;
+    background: rgb(55, 65, 81);
     transition: all 0.3s ease-in-out;
 }
 
