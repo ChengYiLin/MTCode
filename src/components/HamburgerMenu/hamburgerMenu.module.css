@@ -1,0 +1,34 @@
+.line {
+    width: 36px;
+    height: 3px;
+    display: block;
+    background: #666666;
+    transition: all 0.3s ease-in-out;
+}
+
+/* First Line */
+.line:first-child {
+    margin: 0 auto 8px;
+}
+
+.active .line:first-child {
+    transform: translateY(11px) rotate(135deg);
+}
+
+/* Center Line */
+.line:nth-child(2) {
+    margin: 8px auto;
+}
+
+.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+/* Last Line */
+.line:last-child {
+    margin: 8px auto 0;
+}
+
+.active .line:last-child {
+    transform: translateY(-11px) rotate(-135deg);
+}

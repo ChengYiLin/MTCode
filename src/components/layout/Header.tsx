@@ -1,7 +1,6 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import Link from "next/link";
-import { GiHamburgerMenu } from "react-icons/gi";
-import DarkModeButton from "./darkModeButton/DarkModeButton";
+import HamburgerMenu from "../HamburgerMenu";
 
 const navItemsList = [
     {
@@ -19,23 +18,25 @@ const navItemsList = [
 ];
 
 const Header: FC = () => {
+    const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
+
     return (
-        <header className="fixed top-0 left-0 right-0 h-16 bg-transparent">
+        <header className="sticky top-0 left-0 right-0 h-16 bg-transparent shadow-sm">
             <div className="container mx-auto flex h-full px-4 sm:px-0">
                 {/* Logo */}
                 <div className="flex items-center">
-                    <h1 className=" text-gradient-color text-xl font-bold sm:text-2xl">
-                        Martin Code
+                    <h1 className="text-gradient-color text-2xl font-bold">
+                        Martin Lin
                     </h1>
                 </div>
                 {/* Desktop Nav */}
-                <div className="ml-auto hidden items-center sm:flex">
-                    <nav>
+                <div className="ml-auto flex items-center">
+                    <nav className="hidden md:block">
                         <ul className="flex">
                             {navItemsList.map((navItem) => (
                                 <li
                                     key={navItem.navItemNode}
-                                    className="text-nav-color cursor-pointer px-6 font-bold"
+                                    className="cursor-pointer px-6 font-bold text-neutral-900"
                                 >
                                     <Link href={navItem.link}>
                                         <a>{navItem.navItemNode}</a>
@@ -44,14 +45,14 @@ const Header: FC = () => {
                             ))}
                         </ul>
                     </nav>
-                </div>
-                {/* Dark Mode Button */}
-                <div className="ml-auto flex items-center sm:ml-0">
-                    <DarkModeButton />
-                </div>
-                {/* TODO: Mobile Nav */}
-                <div className="flex items-center pl-6 sm:hidden">
-                    <GiHamburgerMenu className="text-xl" />
+                    <div className="block md:hidden">
+                        <HamburgerMenu
+                            isOpen={isOpenMobileMenu}
+                            handleToggle={() =>
+                                setIsOpenMobileMenu((prev) => !prev)
+                            }
+                        />
+                    </div>
                 </div>
             </div>
         </header>
