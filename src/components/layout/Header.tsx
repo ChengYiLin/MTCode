@@ -21,7 +21,7 @@ const Header: FC = () => {
     const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
 
     return (
-        <header className="bg-light sticky top-0 left-0 right-0 h-16 shadow-sm">
+        <header className="sticky top-0 left-0 right-0 h-16 shadow backdrop-blur-md">
             <div className="container mx-auto flex h-full px-4 sm:px-0">
                 {/* Logo */}
                 <div className="flex items-center">
@@ -36,7 +36,7 @@ const Header: FC = () => {
                             {navItemsList.map((navItem) => (
                                 <li
                                     key={navItem.navItemNode}
-                                    className="text-md cursor-pointer px-6 hover:font-bold"
+                                    className="text-md cursor-pointer px-6 transition hover:font-bold hover:text-emerald-500"
                                 >
                                     <Link href={navItem.link}>
                                         <a>{navItem.navItemNode}</a>
@@ -66,7 +66,7 @@ const Header: FC = () => {
                         {navItemsList.map((navItem) => (
                             <li
                                 key={navItem.navItemNode}
-                                className="my-6 cursor-pointer text-xl font-bold"
+                                className="my-6 cursor-pointer text-xl font-bold hover:text-emerald-500"
                                 onClick={() => setIsOpenMobileMenu(false)}
                             >
                                 <Link href={navItem.link}>
