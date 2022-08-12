@@ -8,16 +8,18 @@
 
 /* First Line */
 .line:first-child {
-    margin: 0 auto 8px;
+    width: 27px;
+    margin-left: auto;
 }
 
 .active .line:first-child {
+    width: 36px;
     transform: translateY(11px) rotate(135deg);
 }
 
 /* Center Line */
 .line:nth-child(2) {
-    margin: 8px auto;
+    margin: 8px 0;
 }
 
 .active .line:nth-child(2) {
@@ -25,10 +27,6 @@
 }
 
 /* Last Line */
-.line:last-child {
-    margin: 8px auto 0;
-}
-
 .active .line:last-child {
     transform: translateY(-11px) rotate(-135deg);
 }
