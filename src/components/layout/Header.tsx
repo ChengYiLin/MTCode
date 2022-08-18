@@ -21,7 +21,7 @@ const Header: FC = () => {
     const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
 
     return (
-        <header className="sticky top-0 left-0 right-0 h-16 shadow backdrop-blur-md">
+        <header className="sticky top-0 left-0 right-0 h-16 ">
             <div className="container mx-auto flex h-full px-4 sm:px-0">
                 {/* Logo */}
                 <div className="flex items-center">

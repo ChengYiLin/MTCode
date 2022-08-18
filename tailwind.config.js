@@ -16,6 +16,10 @@ module.exports = {
                     ...defaultTheme.fontFamily.sans,
                 ],
             },
+            color: {
+                primary: "#00040f",
+                secondary: "#00f6ff",
+            },
         },
     },
     plugins: [],

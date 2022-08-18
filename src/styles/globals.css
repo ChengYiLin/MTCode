@@ -8,6 +8,6 @@
     }
 
     .bg-light {
-        @apply bg-slate-100;
+        @apply bg-stone-100;
     }
 }
