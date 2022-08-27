@@ -14,13 +14,13 @@ const Home: NextPage = () => {
                             Engineer
                         </h1>
                         <h2 className="pt-4 text-lg">
-                            Hi, I'm <b className="text-rose-600">Martin</b>, a
+                            Hi, I am <b className="text-rose-600">Martin</b>, a
                             Frontend Engineer from{" "}
                             <b className="text-green-600">Taiwan</b>.
                         </h2>
                         <p>
                             I work with <b className="text-blue-600">React</b>{" "}
-                            Ecosystem, and I'm passionate about building
+                            Ecosystem, and I am passionate about building
                             performant Web app.
                         </p>
                     </div>

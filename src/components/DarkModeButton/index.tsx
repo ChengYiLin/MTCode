@@ -1,5 +1,4 @@
 import { FC, useState, useEffect } from "react";
-import { FiSun, FiMoon } from "react-icons/fi";
 
 const DarkModeButton: FC = () => {
     const [isDarkMode, setIsDarkMode] = useState(true);
@@ -17,11 +16,7 @@ const DarkModeButton: FC = () => {
             className="cursor-pointer rounded-full bg-teal-100 p-2.5 dark:bg-gray-700"
             onClick={() => setIsDarkMode((prev) => !prev)}
         >
-            {isDarkMode ? (
-                <FiMoon className="text-nav-color text-xl" />
-            ) : (
-                <FiSun className="text-nav-color text-xl" />
-            )}
+            {isDarkMode ? <span>Moon</span> : <span>Sun</span>}
         </div>
     );
 };
