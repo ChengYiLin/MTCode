@@ -22,7 +22,7 @@ const Header: FC = () => {
 
     return (
         <header className="sticky top-0 left-0 right-0 h-16 bg-slate-50">
-            <div className="container mx-auto flex h-full px-4 sm:px-0">
+            <div className="container mx-auto flex h-full items-center px-4 sm:px-0">
                 {/* Logo */}
                 <div className="flex items-center">
                     <h1 className="text-gradient-color text-2xl font-bold">
@@ -30,18 +30,20 @@ const Header: FC = () => {
                     </h1>
                 </div>
                 {/* Desktop Nav */}
-                <div className="ml-auto flex items-center">
+                <div className="ml-auto">
                     <nav className="hidden md:block">
-                        <ul className="flex">
+                        <ul className="flex items-center">
                             {navItemsList.map((navItem) => (
-                                <li
+                                <Link
+                                    href={navItem.link}
                                     key={navItem.navItemNode}
-                                    className="text-md cursor-pointer px-6 transition hover:font-bold hover:text-emerald-500"
                                 >
-                                    <Link href={navItem.link}>
-                                        <a>{navItem.navItemNode}</a>
-                                    </Link>
-                                </li>
+                                    <li className="text-md cursor-pointer transition hover:font-bold hover:text-emerald-500">
+                                        <a className="block py-4 px-6">
+                                            {navItem.navItemNode}
+                                        </a>
+                                    </li>
+                                </Link>
                             ))}
                         </ul>
                     </nav>

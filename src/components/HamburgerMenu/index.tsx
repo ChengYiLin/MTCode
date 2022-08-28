@@ -9,7 +9,7 @@ interface Props {
 const HamburgerMenu: FC<Props> = ({ isOpen, handleToggle }) => {
     return (
         <div
-            className={`mx-2 cursor-pointer ${isOpen ? styled.active : ""}`}
+            className={`cursor-pointer p-2 ${isOpen ? styled.active : ""}`}
             onClick={handleToggle}
         >
             <div className={styled.line} />
