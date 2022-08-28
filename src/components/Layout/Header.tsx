@@ -21,7 +21,7 @@ const Header: FC = () => {
     const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
 
     return (
-        <header className="sticky top-0 left-0 right-0 h-16 ">
+        <header className="sticky top-0 left-0 right-0 h-16 bg-slate-50">
             <div className="container mx-auto flex h-full px-4 sm:px-0">
                 {/* Logo */}
                 <div className="flex items-center">
@@ -57,20 +57,22 @@ const Header: FC = () => {
             </div>
             {/* Mobile Nav */}
             <div
-                className={`absolute inset-x-0 h-[calc(100vh-64px)] bg-slate-50 ${
-                    isOpenMobileMenu ? "block" : "hidden"
+                className={`absolute inset-x-0 h-[calc(100vh-64px)] bg-slate-100 transition-all ${
+                    isOpenMobileMenu ? "block opacity-100" : "none opacity-0"
                 }`}
             >
-                <nav className="container mx-auto px-4">
+                <nav className="container mx-auto">
                     <ul>
                         {navItemsList.map((navItem) => (
                             <li
                                 key={navItem.navItemNode}
-                                className="my-6 cursor-pointer text-xl font-bold hover:text-emerald-500"
+                                className="cursor-pointer text-xl font-bold hover:text-emerald-500"
                                 onClick={() => setIsOpenMobileMenu(false)}
                             >
                                 <Link href={navItem.link}>
-                                    <a>{navItem.navItemNode}</a>
+                                    <a className="block px-4 py-6">
+                                        {navItem.navItemNode}
+                                    </a>
                                 </Link>
                             </li>
                         ))}
