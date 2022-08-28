@@ -21,8 +21,8 @@ const Header: FC = () => {
     const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
 
     return (
-        <header className="sticky top-0 left-0 right-0 h-16 bg-slate-50">
-            <div className="container mx-auto flex h-full items-center px-4 sm:px-0">
+        <header className="sticky top-0 left-0 h-16 w-full bg-slate-50">
+            <div className="container relative mx-auto flex h-full items-center px-4 sm:px-0">
                 {/* Logo */}
                 <div className="flex items-center">
                     <h1 className="text-gradient-color text-2xl font-bold">
@@ -56,30 +56,30 @@ const Header: FC = () => {
                         />
                     </div>
                 </div>
-            </div>
-            {/* Mobile Nav */}
-            <div
-                className={`absolute top-16 h-[calc(100vh-64px)] w-full bg-slate-100 transition-[left] duration-500 ${
-                    isOpenMobileMenu ? "left-0" : "left-full"
-                }`}
-            >
-                <nav className="container mx-auto">
-                    <ul>
-                        {navItemsList.map((navItem) => (
-                            <li
-                                key={navItem.navItemNode}
-                                className="cursor-pointer text-xl font-bold hover:text-emerald-500"
-                                onClick={() => setIsOpenMobileMenu(false)}
-                            >
-                                <Link href={navItem.link}>
-                                    <a className="block px-4 py-6">
-                                        {navItem.navItemNode}
-                                    </a>
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
+                {/* Mobile Nav */}
+                <div
+                    className={`absolute top-16 h-[calc(100vh-64px)] w-full bg-slate-100 transition-[left] duration-500 ${
+                        isOpenMobileMenu ? "left-0" : "left-full"
+                    }`}
+                >
+                    <nav className="container mx-auto">
+                        <ul>
+                            {navItemsList.map((navItem) => (
+                                <li
+                                    key={navItem.navItemNode}
+                                    className="cursor-pointer text-xl font-bold hover:text-emerald-500"
+                                    onClick={() => setIsOpenMobileMenu(false)}
+                                >
+                                    <Link href={navItem.link}>
+                                        <a className="block px-4 py-6">
+                                            {navItem.navItemNode}
+                                        </a>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </header>
     );
