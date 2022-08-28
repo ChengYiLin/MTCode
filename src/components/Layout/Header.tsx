@@ -57,8 +57,8 @@ const Header: FC = () => {
             </div>
             {/* Mobile Nav */}
             <div
-                className={`absolute inset-x-0 h-[calc(100vh-64px)] bg-slate-100 transition-all ${
-                    isOpenMobileMenu ? "block opacity-100" : "none opacity-0"
+                className={`absolute top-16 h-[calc(100vh-64px)] w-full bg-slate-100 transition-[left] duration-500 ${
+                    isOpenMobileMenu ? "left-0" : "left-full"
                 }`}
             >
                 <nav className="container mx-auto">
