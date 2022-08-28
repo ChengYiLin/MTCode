@@ -22,10 +22,10 @@ const Header: FC = () => {
 
     return (
         <header className="sticky top-0 left-0 h-16 w-full bg-slate-50">
-            <div className="container relative mx-auto flex h-full items-center px-4 sm:px-0">
+            <div className="container mx-auto flex h-full items-center px-4 sm:px-0">
                 {/* Logo */}
                 <div className="flex items-center">
-                    <h1 className="text-gradient-color text-2xl font-bold">
+                    <h1 className="bg-gradient-main bg-clip-text font-carter text-2xl font-bold">
                         <Link href="/">Martin Lin</Link>
                     </h1>
                 </div>
@@ -58,7 +58,7 @@ const Header: FC = () => {
                 </div>
                 {/* Mobile Nav */}
                 <div
-                    className={`absolute top-16 h-[calc(100vh-64px)] w-full bg-slate-100 transition-[left] duration-500 ${
+                    className={`absolute top-16 block h-[calc(100vh-64px)] w-screen bg-slate-100 transition-[left] duration-500 md:hidden ${
                         isOpenMobileMenu ? "left-0" : "left-full"
                     }`}
                 >

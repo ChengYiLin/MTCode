@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer components {
-    .text-gradient-color {
-        @apply bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent;
+    .bg-gradient-main {
+        @apply bg-gradient-to-r from-sky-400 to-purple-400 text-transparent;
     }
 
     .bg-light {

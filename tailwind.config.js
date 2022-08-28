@@ -15,6 +15,7 @@ module.exports = {
                     "Noto Serif TC",
                     ...defaultTheme.fontFamily.sans,
                 ],
+                carter: ["Carter One", ...defaultTheme.fontFamily.sans],
             },
             color: {
                 primary: "#00040f",
