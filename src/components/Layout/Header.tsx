@@ -22,7 +22,7 @@ const Header: FC = () => {
 
     return (
         <header className="sticky top-0 left-0 h-16 w-full bg-slate-50">
-            <div className="container mx-auto flex h-full items-center px-4 sm:px-0">
+            <div className="container mx-auto flex h-full items-center px-4 lg:px-0">
                 {/* Logo */}
                 <div className="flex items-center">
                     <h1 className="bg-gradient-main bg-clip-text font-carter text-2xl font-bold">
