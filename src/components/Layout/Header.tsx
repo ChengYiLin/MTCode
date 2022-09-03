@@ -78,7 +78,7 @@ const Header: FC = () => {
                                 <li
                                     key={navItem.navItemNode}
                                     className="cursor-pointer text-xl font-bold hover:text-emerald-500"
-                                    onClick={() => setIsOpenMobileMenu(false)}
+                                    onClick={clickHamburgerMenu}
                                 >
                                     <Link href={navItem.link}>
                                         <a className="block px-4 py-6">
