@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 import Link from "next/link";
 import { Fragment } from "react";
 import { RiExternalLinkFill } from "react-icons/ri";
@@ -6,6 +7,9 @@ import { RiExternalLinkFill } from "react-icons/ri";
 const Home: NextPage = () => {
     return (
         <Fragment>
+            <Head>
+                <title>Martin Code</title>
+            </Head>
             {/* Who I am */}
             <section>
                 <div className="container mx-auto flex min-h-[calc(100vh-64px)] flex-col md:flex-row">
