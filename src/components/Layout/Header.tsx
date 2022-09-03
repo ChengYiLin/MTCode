@@ -20,12 +20,24 @@ const navItemsList = [
 const Header: FC = () => {
     const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
 
+    const clickHamburgerMenu = () => {
+        const bodyTag = document.getElementsByTagName("body");
+
+        setIsOpenMobileMenu((prevStatus) => {
+            prevStatus
+                ? bodyTag[0].style.setProperty("overflow", "visible")
+                : bodyTag[0].style.setProperty("overflow", "hidden");
+
+            return !prevStatus;
+        });
+    };
+
     return (
-        <header className="sticky top-0 left-0 h-16 w-full bg-slate-50">
-            <div className="container mx-auto flex h-full items-center px-4 lg:px-0">
+        <header className="fixed top-0 left-0 h-14 w-full bg-slate-50">
+            <div className="container relative mx-auto flex h-full items-center px-4 lg:px-0">
                 {/* Logo */}
                 <div className="flex items-center">
-                    <h1 className="bg-gradient-main bg-clip-text font-carter text-2xl font-bold">
+                    <h1 className="bg-gradient-main bg-clip-text font-carter text-xl font-bold sm:text-2xl">
                         <Link href="/">Martin Lin</Link>
                     </h1>
                 </div>
@@ -50,15 +62,13 @@ const Header: FC = () => {
                     <div className="block md:hidden">
                         <HamburgerMenu
                             isOpen={isOpenMobileMenu}
-                            handleToggle={() =>
-                                setIsOpenMobileMenu((prev) => !prev)
-                            }
+                            handleToggle={clickHamburgerMenu}
                         />
                     </div>
                 </div>
                 {/* Mobile Nav */}
                 <div
-                    className={`absolute top-16 block h-[calc(100vh-64px)] w-screen bg-slate-100 transition-[left] duration-500 md:hidden ${
+                    className={`absolute top-14 block h-[calc(100vh-56px)] w-screen bg-slate-100 transition-[left] duration-500 md:hidden ${
                         isOpenMobileMenu ? "left-0" : "left-full"
                     }`}
                 >

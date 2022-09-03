@@ -12,7 +12,7 @@ const Home: NextPage = () => {
             </Head>
             {/* Who I am */}
             <section>
-                <div className="container mx-auto flex min-h-[calc(100vh-64px)] flex-col md:flex-row">
+                <div className="container mx-auto flex min-h-[calc(100vh-56px)] flex-col md:flex-row">
                     <div className="flex-1 self-center">
                         <h1 className="py-12 text-center text-4xl font-extrabold sm:text-6xl">
                             Frontend Engineer

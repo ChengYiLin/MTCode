@@ -1,5 +1,5 @@
 .line {
-    width: 36px;
+    width: 28px;
     height: 3px;
     display: block;
     background: rgb(55, 65, 81);
@@ -8,18 +8,18 @@
 
 /* First Line */
 .line:first-child {
-    width: 27px;
+    width: 18px;
     margin-left: auto;
 }
 
 .active .line:first-child {
-    width: 36px;
-    transform: translateY(11px) rotate(135deg);
+    width: 28px;
+    transform: translateY(8px) rotate(135deg);
 }
 
 /* Center Line */
 .line:nth-child(2) {
-    margin: 8px 0;
+    margin: 6px 0;
 }
 
 .active .line:nth-child(2) {
