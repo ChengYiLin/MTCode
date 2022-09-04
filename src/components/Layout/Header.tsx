@@ -33,7 +33,7 @@ const Header: FC = () => {
     };
 
     return (
-        <header className="fixed top-0 left-0 h-14 w-full bg-slate-50">
+        <header className="fixed top-0 left-0 z-30 h-14 w-full bg-slate-50">
             <div className="container relative mx-auto flex h-full items-center px-4 lg:px-0">
                 {/* Logo */}
                 <div className="flex items-center">
@@ -43,7 +43,7 @@ const Header: FC = () => {
                 </div>
                 {/* Desktop Nav */}
                 <div className="ml-auto">
-                    <nav className="hidden md:block">
+                    <nav className="hidden sm:block">
                         <ul className="flex items-center">
                             {navItemsList.map((navItem) => (
                                 <Link
@@ -59,7 +59,7 @@ const Header: FC = () => {
                             ))}
                         </ul>
                     </nav>
-                    <div className="block md:hidden">
+                    <div className="block sm:hidden">
                         <HamburgerMenu
                             isOpen={isOpenMobileMenu}
                             handleToggle={clickHamburgerMenu}
@@ -68,7 +68,7 @@ const Header: FC = () => {
                 </div>
                 {/* Mobile Nav */}
                 <div
-                    className={`absolute top-14 block h-[calc(100vh-56px)] w-screen bg-slate-100 transition-[left] duration-500 md:hidden ${
+                    className={`absolute top-14 block h-[calc(100vh-56px)] w-screen bg-slate-100 transition-[left] duration-500 sm:hidden ${
                         isOpenMobileMenu ? "left-0" : "left-full"
                     }`}
                 >
