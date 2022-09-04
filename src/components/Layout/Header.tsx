@@ -11,10 +11,6 @@ const navItemsList = [
         navItemNode: "Blog",
         link: "/blog",
     },
-    {
-        navItemNode: "About",
-        link: "/about",
-    },
 ];
 
 const Header: FC = () => {

@@ -7,7 +7,15 @@
         @apply bg-gradient-to-r from-sky-400 to-purple-400 text-transparent;
     }
 
+    .bg-gradient-secondary {
+        @apply bg-gradient-to-r from-pink-500 to-violet-500 text-transparent;
+    }
+
     .bg-light {
         @apply bg-stone-100;
+    }
+
+    .position-center {
+        @apply absolute inset-1/2 -translate-x-1/2 -translate-y-1/2;
     }
 }

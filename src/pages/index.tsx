@@ -1,8 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
 import { Fragment } from "react";
 import { RiExternalLinkFill } from "react-icons/ri";
+
+import TimeLine, { EventsData } from "@components/TimeLine";
 
 const Home: NextPage = () => {
     return (
@@ -12,14 +13,14 @@ const Home: NextPage = () => {
             </Head>
             {/* Who I am */}
             <section>
-                <div className="container mx-auto flex min-h-[calc(100vh-56px)] flex-col md:flex-row">
+                <div className="container mx-auto flex min-h-[calc(100vh-56px)] flex-col md:flex-row 2xl:min-h-[80vh]">
                     <div className="flex-1 self-center">
                         <h1 className="py-12 text-center text-4xl font-extrabold sm:text-6xl">
                             Frontend Engineer
                         </h1>
                         <h2 className="mx-auto max-w-xl px-4 text-center text-lg lg:text-xl">
                             Hi, my name is{" "}
-                            <span className="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-2xl font-extrabold text-transparent">
+                            <span className="bg-gradient-secondary bg-clip-text text-2xl font-extrabold text-transparent">
                                 Martin.
                             </span>
                             <br />
@@ -32,17 +33,21 @@ const Home: NextPage = () => {
                             <span className="text-purple-500">Redux</span>.
                         </h2>
                         <div className="flex justify-center py-12 ">
-                            <Link href="/about">
+                            <a
+                                href="https://docs.google.com/document/d/1qohyj_emtczFoOeUp8N19ltUTxL33TuP/edit?usp=sharing&ouid=113887428276543602688&rtpof=true&sd=true"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
                                 <div className="bg-gradient-main flex cursor-pointer items-center rounded-full px-6 py-2 text-white hover:opacity-80">
                                     <span className="pr-2 text-xl">
-                                        About Me
+                                        Hire Me
                                     </span>
                                     <RiExternalLinkFill
                                         size="1.5rem"
                                         className="fill-white"
                                     />
                                 </div>
-                            </Link>
+                            </a>
                         </div>
                     </div>
                     <div className="flex-1 self-center justify-self-center">
@@ -50,6 +55,15 @@ const Home: NextPage = () => {
                             <div className="h-full w-full bg-[url('/images/selfie.png')] bg-cover" />
                         </div>
                     </div>
+                </div>
+            </section>
+            {/* Experience */}
+            <section>
+                <div className="container mx-auto xl:max-w-[1200px]">
+                    <p className="text-center text-3xl sm:text-4xl">
+                        Experiences
+                    </p>
+                    <TimeLine timeEvents={EventsData} />
                 </div>
             </section>
         </Fragment>
