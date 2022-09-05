@@ -1,9 +1,9 @@
-import { FC } from "react";
+import { FC, MouseEventHandler } from "react";
 import styled from "./hamburgerMenu.module.css";
 
 interface Props {
     isOpen: boolean;
-    handleToggle: () => void;
+    handleToggle: MouseEventHandler<HTMLDivElement>;
 }
 
 const HamburgerMenu: FC<Props> = ({ isOpen, handleToggle }) => {
