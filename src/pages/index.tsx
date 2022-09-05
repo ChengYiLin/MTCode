@@ -13,7 +13,7 @@ const Home: NextPage = () => {
             </Head>
             {/* Who I am */}
             <section>
-                <div className="container mx-auto flex min-h-[calc(100vh-56px)] flex-col md:flex-row 2xl:min-h-[80vh]">
+                <div className="container mx-auto flex min-h-[calc(100vh-56px)] flex-col md:flex-row 2xl-h:min-h-[80vh]">
                     <div className="flex-1 self-center">
                         <h1 className="py-12 text-center text-4xl font-extrabold sm:text-6xl">
                             Frontend Engineer
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
             {/* Experience */}
             <section>
                 <div className="container mx-auto xl:max-w-[1200px]">
-                    <p className="text-center text-3xl sm:text-4xl">
+                    <p className="mb-8 text-center text-3xl sm:text-4xl">
                         Experiences
                     </p>
                     <TimeLine timeEvents={EventsData} />

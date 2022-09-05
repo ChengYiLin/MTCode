@@ -21,6 +21,9 @@ module.exports = {
                 primary: "#00040f",
                 secondary: "#00f6ff",
             },
+            screens: {
+                "2xl-h": { raw: "(min-height: 1200px)" },
+            },
         },
     },
     plugins: [],
