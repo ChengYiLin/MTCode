@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, SyntheticEvent, useState } from "react";
 import Link from "next/link";
 import HamburgerMenu from "../HamburgerMenu";
 
@@ -16,7 +16,8 @@ const navItemsList = [
 const Header: FC = () => {
     const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
 
-    const clickHamburgerMenu = () => {
+    const clickHamburgerMenu = (e: SyntheticEvent) => {
+        e.preventDefault();
         const bodyTag = document.getElementsByTagName("body");
 
         setIsOpenMobileMenu((prevStatus) => {
