@@ -2,6 +2,16 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import dayjs from "dayjs";
 import { RiExternalLinkFill } from "react-icons/ri";
+import {
+    SiJavascript,
+    SiTypescript,
+    SiReact,
+    SiNextdotjs,
+    SiTailwindcss,
+    SiNodedotjs,
+    SiWebpack,
+    SiAmazonaws,
+} from "react-icons/si";
 import TimeLine, { EventsData } from "@components/TimeLine";
 
 const Home: NextPage = () => {
@@ -69,23 +79,62 @@ const Home: NextPage = () => {
                     <p className="mb-8 text-center font-carter text-3xl font-extrabold sm:text-4xl">
                         About Me
                     </p>
-                    <div className="flex flex-col gap-8 sm:flex-row">
+                    <div className="flex flex-col items-center gap-8 sm:flex-row">
                         <div className="flex-1 ">
                             <div className="mx-auto h-[300px] w-[300px] rounded-xl bg-[url('/images/skillsStack.jpeg')] bg-cover sm:h-[400px] sm:w-[400px]" />
                         </div>
-                        <div className="flex-1 px-8">
-                            <p className="bg-gradient-secondary mb-4 inline-block bg-clip-text text-3xl font-black leading-10">
-                                Martin Lin
-                            </p>
-                            <p className="mb-4 2xl:text-xl ">
-                                I&apos;m a Frontend Developer based in Taiwan
-                                and have {developmentYears} years of experiences
-                                writing Web apps. I love solving problems by
-                                simplifying complexity and putting those ideas
-                                into practice, and enjoy every stage of creating
-                                digital products that are wanted by users, easy
-                                to use but also visually top notch.
-                            </p>
+                        <div className="flex flex-1 flex-col justify-between px-8">
+                            <div>
+                                <p className="bg-gradient-secondary mb-4 inline-block bg-clip-text text-4xl font-black leading-10">
+                                    Martin Lin
+                                </p>
+                                <p className="mb-4 2xl:text-xl ">
+                                    I&apos;m a Frontend Developer based in
+                                    Taiwan and have {developmentYears} years of
+                                    experiences writing Web apps. I love solving
+                                    problems by simplifying complexity and
+                                    putting those ideas into practice. Enjoy the
+                                    process of creating web pages with great
+                                    user experience and visually top notch.
+                                    Currently I work with{" "}
+                                    <span className="font-extrabold text-sky-500">
+                                        React
+                                    </span>{" "}
+                                    Ecosystem, using my favorite tools below to
+                                    building fantastic projects.
+                                </p>
+                            </div>
+                            <div>
+                                <p className="mb-4 text-xl font-black leading-10 text-zinc-500">
+                                    Current Favorite Tech Stack
+                                </p>
+                                <ul className="flex flex-wrap gap-4 text-4xl md:text-5xl">
+                                    <li className="">
+                                        <SiJavascript className="text-yellow-400" />
+                                    </li>
+                                    <li className="">
+                                        <SiTypescript className="text-blue-400" />
+                                    </li>
+                                    <li>
+                                        <SiReact className="text-sky-400" />
+                                    </li>
+                                    <li>
+                                        <SiNextdotjs className="text-black" />
+                                    </li>
+                                    <li>
+                                        <SiTailwindcss className="text-sky-300" />
+                                    </li>
+                                    <li>
+                                        <SiWebpack className="text-blue-400" />
+                                    </li>
+                                    <li>
+                                        <SiNodedotjs className="text-green-400" />
+                                    </li>
+                                    <li>
+                                        <SiAmazonaws className="text-zinc-700" />
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
