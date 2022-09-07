@@ -30,7 +30,7 @@ const Header: FC = () => {
     };
 
     return (
-        <header className="fixed top-0 left-0 z-30 h-14 w-full bg-slate-50">
+        <header className="fixed top-0 left-0 z-30 h-14 w-full bg-white">
             <div className="container relative mx-auto flex h-full items-center px-4 lg:px-0">
                 {/* Logo */}
                 <div className="flex items-center">
