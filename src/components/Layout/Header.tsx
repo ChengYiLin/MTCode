@@ -9,7 +9,7 @@ const navItemsList = [
     },
     {
         navItemNode: "Blog",
-        link: "/blog",
+        link: "/blog/list",
     },
 ];
 
