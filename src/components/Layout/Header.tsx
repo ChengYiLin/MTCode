@@ -7,10 +7,10 @@ const navItemsList = [
         navItemNode: "Home",
         link: "/",
     },
-    {
-        navItemNode: "Blog",
-        link: "/blog/list",
-    },
+    // {
+    //     navItemNode: "Blog",
+    //     link: "/blog/list",
+    // },
 ];
 
 const Header: FC = () => {
