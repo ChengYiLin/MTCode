@@ -8,7 +8,7 @@ import TimeLine, { EventsData } from "@components/TimeLine";
 
 const HeroSection: FC = () => (
     <section>
-        <div className="container mx-auto flex min-h-[calc(100vh-56px)] flex-col md:flex-row 2xl-h:min-h-[80vh]">
+        <div className="container mx-auto flex min-h-[calc(100vh-216px)] flex-col md:flex-row 2xl-h:min-h-[80vh]">
             <div className="flex-1 self-center">
                 <h1 className="py-12 text-center text-4xl font-extrabold sm:text-6xl">
                     Frontend Developer

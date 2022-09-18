@@ -1,10 +1,10 @@
-import fs from "fs";
+import { readFileSync, readdirSync } from "fs";
 import { join } from "path";
 import type { NextPage, GetStaticProps, GetStaticPaths } from "next";
 import matter from "gray-matter";
 import md from "markdown-it";
 
-interface IPostPageProps {
+export interface IPostPageProps {
     title: string;
     date: string;
     tags: string[];
@@ -36,7 +36,7 @@ const Post: NextPage<IPostPageProps> = (props) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const postDir = join(process.cwd(), "src/content/blog");
-    const postFiles = fs.readdirSync(postDir).map((fileName) => ({
+    const postFiles = readdirSync(postDir).map((fileName) => ({
         params: {
             postName: fileName.replace(".mdx", ""),
         },
@@ -51,7 +51,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
     const postName = params?.postName as string;
     const postPath = join(process.cwd(), "src/content/blog", `${postName}.mdx`);
-    const postFile = fs.readFileSync(postPath, "utf-8");
+    const postFile = readFileSync(postPath, "utf-8");
 
     const { content, data } = matter(postFile);
 
