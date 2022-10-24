@@ -2,7 +2,6 @@ import { readFileSync, readdirSync } from "fs";
 import { join } from "path";
 import type { NextPage, GetStaticProps, GetStaticPaths } from "next";
 import matter from "gray-matter";
-import md from "markdown-it";
 
 export interface IPostPageProps {
     title: string;
@@ -26,9 +25,6 @@ const Post: NextPage<IPostPageProps> = (props) => {
             <p>banner Image : {bannerImage}</p>
             <div>
                 <p className="text-xl">Content</p>
-                <div
-                    dangerouslySetInnerHTML={{ __html: md().render(content) }}
-                />
             </div>
         </div>
     );
