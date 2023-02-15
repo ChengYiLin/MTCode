@@ -1,18 +1,21 @@
 import "./globals.css";
 
+import { Noto_Sans_TC } from "@next/font/google";
+
+const notoSansTC = Noto_Sans_TC({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html lang="zh-TW">
       <head />
-      <body>{children}</body>
+      <body className={`${notoSansTC.className}`}>{children}</body>
     </html>
   );
 }
