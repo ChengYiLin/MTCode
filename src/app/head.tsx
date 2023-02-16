@@ -2,12 +2,10 @@ export default function Head() {
   return (
     <>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
-      <title>
-        Martin Code-馬丁學程式 - 網頁前後端開發、軟體工程師轉職、電商
-      </title>
+      <title>Martin Code - 網頁前後端開發、軟體工程師轉職、電商</title>
       <meta
         property="og:title"
-        content="Martin Code-馬丁學程式 - 網頁前後端開發、軟體工程師轉職、電商"
+        content="Martin Code - 網頁前後端開發、軟體工程師轉職、電商"
       ></meta>
       <meta
         name="description"

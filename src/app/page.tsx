@@ -1,8 +1,7 @@
 export default function Home() {
   return (
-    <main>
-      <p className="text-xl text-rose-600">Hello Tailwind CSS</p>
+    <div className="container mx-auto">
       <p>這是中文測試</p>
-    </main>
+    </div>
   );
 }
