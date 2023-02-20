@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="zh-TW" className={`${notoSansTC.variable}`}>
       <head />
-      <body className={`${notoSansTC.className} bg-light text-dark`}>
+      <body className={`${notoSansTC.className}`}>
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-auto">{children}</main>
