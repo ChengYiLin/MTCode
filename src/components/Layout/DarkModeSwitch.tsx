@@ -1,7 +1,12 @@
 "use client";
 
 import { FC, useEffect, useState } from "react";
-import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
+import {
+  MdDarkMode,
+  MdLightMode,
+  MdOutlineDarkMode,
+  MdOutlineLightMode,
+} from "react-icons/md";
 
 enum ETheme {
   LIGHT = "light",
@@ -32,16 +37,16 @@ const DarkModeSwitch: FC = () => {
 
   return (
     <button
-      className="px-3 py-1 rounded-full border-4 bg-rose-100 border-rose-100 hover:border-rose-300"
+      className="px-3 py-2 rounded-full border-4 bg-dark "
       onClick={(e) => {
         e.preventDefault();
         toggleWebSiteMode();
       }}
     >
       {theme === ETheme["DARK"] ? (
-        <MdOutlineLightMode className="text-primary" />
+        <MdLightMode className="text-amber-500" />
       ) : (
-        <MdOutlineDarkMode className="text-primary" />
+        <MdDarkMode className="text-amber-300" />
       )}
     </button>
   );
