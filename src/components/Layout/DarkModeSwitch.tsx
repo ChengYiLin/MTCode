@@ -1,12 +1,7 @@
 "use client";
 
 import { FC, useEffect, useState } from "react";
-import {
-  MdDarkMode,
-  MdLightMode,
-  MdOutlineDarkMode,
-  MdOutlineLightMode,
-} from "react-icons/md";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 enum ETheme {
   LIGHT = "light",
