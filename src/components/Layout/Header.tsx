@@ -7,7 +7,7 @@ import MobileMenu from "./MobileMenu";
 
 const Header: FC = () => {
   return (
-    <header className="relative">
+    <header className="relative border-b-2 border-slate-200 dark:border-slate-500">
       <div className="py-2 sm:py-4 container mx-auto flex justify-between items-center">
         <Link href="/">
           <div className="pl-2 sm:pl-0 flex items-center gap-2 select-none cursor-pointer hover:text-primary">
