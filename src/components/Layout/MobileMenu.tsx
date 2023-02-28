@@ -19,11 +19,11 @@ const MobileMenu: FC = () => {
 
   return (
     <>
-      <div className="p-3" onClick={() => setShowMenu((prev) => !prev)}>
-        <RiMenuFoldLine className="text-xl cursor-pointer" />
+      <div className="pl-2" onClick={() => setShowMenu((prev) => !prev)}>
+        <RiMenuFoldLine className="text-2xl cursor-pointer" />
       </div>
       <div
-        className={`fixed inset-0 bg-slate-50/25 backdrop-blur-lg flex justify-end ${
+        className={`fixed inset-0 bg-slate-50/25 dark:bg-slate-400/25 backdrop-blur-lg flex justify-end z-30 ${
           showMenu ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -33,23 +33,23 @@ const MobileMenu: FC = () => {
             showMenu ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <div className="basis-[60px] border-b-2 flex justify-between items-center">
-            <div className="px-3">
+          <div className="basis-14 box-border px-4 py-3 border-b-2 flex justify-between items-center">
+            <div>
               <DarkModeSwitch />
             </div>
-            <div className="p-3" onClick={() => setShowMenu(false)}>
-              <RiCloseLine className="text-xl cursor-pointer" />
+            <div onClick={() => setShowMenu(false)}>
+              <RiCloseLine className="text-2xl cursor-pointer" />
             </div>
           </div>
           <div className="grow basis-auto">
             <nav>
               <a onClick={(e) => handleNavigate(e, "/Blog")}>
-                <div className="p-4 border-b-2 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer">
+                <div className="px-4 py-3 border-b-2 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer">
                   總覽
                 </div>
               </a>
               <a onClick={(e) => handleNavigate(e, "/About")}>
-                <div className="p-4 border-b-2 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer">
+                <div className="px-4 py-3 border-b-2 hover:bg-slate-200  cursor-pointer">
                   關於我
                 </div>
               </a>

@@ -32,16 +32,16 @@ const DarkModeSwitch: FC = () => {
 
   return (
     <button
-      className="px-3 py-2 rounded-full border-4 bg-dark "
+      className="w-7 h-7 sm:w-10 sm:h-10 flex-center rounded-full bg-dark dark:bg-light"
       onClick={(e) => {
         e.preventDefault();
         toggleWebSiteMode();
       }}
     >
       {theme === ETheme["DARK"] ? (
-        <MdLightMode className="text-amber-500" />
+        <MdLightMode className="text-amber-500 text-base sm:text-xl" />
       ) : (
-        <MdDarkMode className="text-amber-300" />
+        <MdDarkMode className="text-amber-300 text-base sm:text-xl" />
       )}
     </button>
   );

@@ -7,14 +7,14 @@ import MobileMenu from "./MobileMenu";
 
 const Header: FC = () => {
   return (
-    <header className="relative border-b-2 border-slate-200 dark:border-slate-500">
-      <div className="py-2 sm:py-4 container mx-auto flex justify-between items-center">
+    <header className="fixed inset-x-0 border-b-2 border-slate-200 dark:border-slate-500">
+      <div className="px-4 sm:px-8 h-14 sm:h-16 box-border py-2 container mx-auto flex justify-between items-center">
         <Link href="/">
-          <div className="pl-2 sm:pl-0 flex items-center gap-2 select-none cursor-pointer hover:text-primary">
+          <div className="flex items-center gap-2 select-none cursor-pointer hover:text-primary">
             <div className="w-9 h-9 sm:w-12 sm:h-12 relative">
               <Image src="/logo/rose.png" alt="Logo" fill />
             </div>
-            <span className="text-lg sm:text-[24px] font-bold transition-colors duration-300 text">
+            <span className="text-lg sm:text-[24px] font-bold transition-colors duration-150 text">
               Martin Code
             </span>
           </div>
