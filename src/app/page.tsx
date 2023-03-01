@@ -27,7 +27,7 @@ export default function Home() {
               <div className="relative">
                 <div className="w-16 h-16 bg-primary rounded-full relative overflow-clip">
                   <Image
-                    src="/assets/selfie.png"
+                    src="/assets/selfie/selfie_128.png"
                     alt="selfie"
                     fill
                     className="translate-x-1 translate-y-1"
@@ -44,6 +44,7 @@ export default function Home() {
                   target="_blank"
                   href="https://github.com/ChengYiLin"
                   rel="noreferrer"
+                  aria-label="Github"
                 >
                   <BsGithub />
                 </a>
@@ -52,6 +53,7 @@ export default function Home() {
                   target="_blank"
                   href="https://www.linkedin.com/in/cheng-yi-lin/"
                   rel="noreferrer"
+                  aria-label="Linkedin"
                 >
                   <BsLinkedin />
                 </a>
@@ -60,6 +62,7 @@ export default function Home() {
                   target="_blank"
                   href="https://docs.google.com/document/d/1qohyj_emtczFoOeUp8N19ltUTxL33TuP/edit?usp=sharing&ouid=113887428276543602688&rtpof=true&sd=true"
                   rel="noreferrer"
+                  aria-label="Resume"
                 >
                   <BsFillFilePersonFill />
                 </a>
@@ -69,7 +72,7 @@ export default function Home() {
           <div className="pt-0 pb-16 lg:py-8 lg:col-start-8 lg:col-span-5">
             <div className="w-80 h-80 mx-auto rounded-tl-[40%] rounded-r-3xl bg-gradient relative overflow-clip shadow-[12px_12px_0] shadow-amber-300 dark:shadow-rose-600">
               <Image
-                src="/assets/selfie.png"
+                src="/assets/selfie/selfie_360.png"
                 alt="selfie"
                 fill
                 style={{ objectFit: "cover" }}

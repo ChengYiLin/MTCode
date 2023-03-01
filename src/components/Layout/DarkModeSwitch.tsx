@@ -33,6 +33,7 @@ const DarkModeSwitch: FC = () => {
   return (
     <button
       className="w-7 h-7 sm:w-10 sm:h-10 flex-center rounded-full bg-dark dark:bg-light"
+      aria-label="Dark Mode Switch"
       onClick={(e) => {
         e.preventDefault();
         toggleWebSiteMode();
