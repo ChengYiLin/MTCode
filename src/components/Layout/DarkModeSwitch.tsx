@@ -9,12 +9,21 @@ enum ETheme {
 }
 
 const DarkModeSwitch: FC = () => {
-  const [theme, setTheme] = useState(() =>
-    typeof window !== "undefined" &&
-    window?.matchMedia("(prefers-color-scheme: dark)").matches
-      ? ETheme["DARK"]
-      : ETheme["LIGHT"]
-  );
+  const [theme, setTheme] = useState(() => {
+    if (typeof window === undefined) {
+      return ETheme["LIGHT"];
+    }
+
+    if (window.localStorage.getItem("theme")) {
+      return window.localStorage.getItem("theme");
+    }
+
+    if (window?.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return ETheme["DARK"];
+    }
+
+    return ETheme["LIGHT"];
+  });
 
   const toggleWebSiteMode = () => {
     setTheme((prev) =>
@@ -25,8 +34,10 @@ const DarkModeSwitch: FC = () => {
   useEffect(() => {
     if (theme === ETheme["DARK"]) {
       document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", ETheme["DARK"]);
     } else {
       document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", ETheme["LIGHT"]);
     }
   }, [theme]);
 
