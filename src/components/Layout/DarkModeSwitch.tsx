@@ -8,14 +8,16 @@ enum ETheme {
   DARK = "dark",
 }
 
+const IS_SERVER = typeof window === "undefined";
+
 const DarkModeSwitch: FC = () => {
   const [theme, setTheme] = useState(() => {
-    if (typeof window === undefined) {
+    if (IS_SERVER) {
       return ETheme["LIGHT"];
     }
 
-    if (window.localStorage.getItem("theme")) {
-      return window.localStorage.getItem("theme");
+    if (localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
     }
 
     if (window?.matchMedia("(prefers-color-scheme: dark)").matches) {
