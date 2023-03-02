@@ -16,6 +16,11 @@ export default function Head() {
         content="Martin 林政儀, 我是來自台灣的軟體工程師, 擅長網頁前後端開發, 熟悉 JavaScript 及 React, 非本科系轉職寫軟體"
       ></meta>
 
+      <meta
+        name="google-site-verification"
+        content="SYqHpyRQoWfdH7rdpmFmLq4dguvQOo0GwNM4tuCiHUc"
+      />
+
       <link rel="icon" href="/favicon/favicon.ico" />
       <link
         rel="icon"
