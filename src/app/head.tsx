@@ -1,3 +1,5 @@
+import Script from "next/script";
+
 export default function Head() {
   return (
     <>
@@ -16,11 +18,6 @@ export default function Head() {
         content="Martin 林政儀, 我是來自台灣的軟體工程師, 擅長網頁前後端開發, 熟悉 JavaScript 及 React, 非本科系轉職寫軟體"
       ></meta>
 
-      <meta
-        name="google-site-verification"
-        content="SYqHpyRQoWfdH7rdpmFmLq4dguvQOo0GwNM4tuCiHUc"
-      />
-
       <link rel="icon" href="/favicon/favicon.ico" />
       <link
         rel="icon"
@@ -34,6 +31,28 @@ export default function Head() {
         sizes="16x16"
         href="/favicon/favicon-16x16.png"
       />
+
+      {/* Google Analytics & Site Verification */}
+      <meta
+        name="google-site-verification"
+        content="SYqHpyRQoWfdH7rdpmFmLq4dguvQOo0GwNM4tuCiHUc"
+      />
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-9E073G8KPV"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){
+            dataLayer.push(arguments);
+          }
+     
+          
+          gtag('js', new Date());
+  
+          gtag('config', 'G-9E073G8KPV');`}
+      </Script>
     </>
   );
 }
