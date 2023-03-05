@@ -30,11 +30,11 @@ const Header: FC = () => {
               關於我
             </div>
           </Link>
-          <DarkModeSwitch />
+          {/* <DarkModeSwitch /> */}
         </nav>
-        <div className="sm:hidden flex gap-4">
+        {/* <div className="sm:hidden flex gap-4">
           <MobileMenu />
-        </div>
+        </div> */}
       </div>
     </header>
   );
