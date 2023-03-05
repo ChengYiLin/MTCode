@@ -1,17 +1,17 @@
-import Image from "next/image";
-import { BsFillFilePersonFill, BsGithub, BsLinkedin } from "react-icons/bs";
+import Image from 'next/image';
+import { BsFillFilePersonFill, BsGithub, BsLinkedin } from 'react-icons/bs';
 
 export default function Home() {
   return (
     <>
       <section className="bg-slate-100 dark:bg-slate-800">
-        <div className="px-4 max-w-screen-xl mx-auto lg:px-16 lg:grid lg:grid-cols-12 lg:gap-4 lg:items-center">
+        <div className="mx-auto max-w-screen-xl px-4 lg:grid lg:grid-cols-12 lg:items-center lg:gap-4 lg:px-16">
           <div className="py-16 text-center lg:col-span-5">
             <h1 className="text-5xl font-extrabold leading-tight">
               Software Engineer
             </h1>
-            <h2 className="max-w-xs mx-auto text-lg py-12">
-              Hi, 我是{" "}
+            <h2 className="mx-auto max-w-xs py-12 text-lg">
+              Hi, 我是{' '}
               <span className="text-xl font-bold text-primary dark:text-secondary">
                 Martin
               </span>
@@ -23,9 +23,9 @@ export default function Home() {
               <br />
               熟悉 JavaScript 及 React 生態系
             </h2>
-            <div className="max-w-xs mx-auto border-2 border-black dark:border-slate-300 rounded-full p-2 flex justify-between items-center">
+            <div className="mx-auto flex max-w-xs items-center justify-between rounded-full border-2 border-black p-2 dark:border-slate-300">
               <div className="relative">
-                <div className="w-16 h-16 bg-primary rounded-full relative overflow-clip">
+                <div className="relative h-16 w-16 overflow-clip rounded-full bg-primary">
                   <Image
                     src="/assets/selfie/selfie_128.png"
                     alt="selfie"
@@ -33,14 +33,14 @@ export default function Home() {
                     className="translate-x-1 translate-y-1"
                   />
                 </div>
-                <div className="absolute w-4 h-4 top-12 right-0 z-[1]">
-                  <div className="w-3 h-3 bg-green-300 rounded-full absolute z-[1]"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full absolute animate-ping"></div>
+                <div className="absolute top-12 right-0 z-[1] h-4 w-4">
+                  <div className="absolute z-[1] h-3 w-3 rounded-full bg-green-300"></div>
+                  <div className="absolute h-3 w-3 animate-ping rounded-full bg-green-500"></div>
                 </div>
               </div>
               <nav className="flex gap-6 px-4">
                 <a
-                  className="text-2xl cursor-pointer hover:text-slate-600"
+                  className="cursor-pointer text-2xl hover:text-slate-600"
                   target="_blank"
                   href="https://github.com/ChengYiLin"
                   rel="noreferrer"
@@ -49,7 +49,7 @@ export default function Home() {
                   <BsGithub />
                 </a>
                 <a
-                  className="text-2xl cursor-pointer hover:text-sky-600"
+                  className="cursor-pointer text-2xl hover:text-sky-600"
                   target="_blank"
                   href="https://www.linkedin.com/in/cheng-yi-lin/"
                   rel="noreferrer"
@@ -58,7 +58,7 @@ export default function Home() {
                   <BsLinkedin />
                 </a>
                 <a
-                  className="text-2xl cursor-pointer hover:text-rose-600"
+                  className="cursor-pointer text-2xl hover:text-rose-600"
                   target="_blank"
                   href="https://docs.google.com/document/d/1qohyj_emtczFoOeUp8N19ltUTxL33TuP/edit?usp=sharing&ouid=113887428276543602688&rtpof=true&sd=true"
                   rel="noreferrer"
@@ -69,13 +69,13 @@ export default function Home() {
               </nav>
             </div>
           </div>
-          <div className="pt-0 pb-16 lg:py-8 lg:col-start-8 lg:col-span-5">
-            <div className="w-80 h-80 mx-auto rounded-tl-[40%] rounded-r-3xl bg-gradient relative overflow-clip shadow-[12px_12px_0] shadow-amber-300 dark:shadow-rose-600">
+          <div className="pt-0 pb-16 lg:col-span-5 lg:col-start-8 lg:py-8">
+            <div className="bg-gradient relative mx-auto h-80 w-80 overflow-clip rounded-r-3xl rounded-tl-[40%] shadow-[12px_12px_0] shadow-amber-300 dark:shadow-rose-600">
               <Image
                 src="/assets/selfie/selfie_360.png"
                 alt="selfie"
                 fill
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: 'cover' }}
               />
             </div>
           </div>

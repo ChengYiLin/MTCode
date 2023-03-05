@@ -1,9 +1,9 @@
-import { FC } from "react";
+import { FC } from 'react';
 
 const Footer: FC = () => {
   return (
     <footer className="py-8">
-      <div className="max-w-screen-xl mx-auto">
+      <div className="mx-auto max-w-screen-xl">
         <p className="text-center text-xs text-slate-500">
           Martin Lin • © 2023 • Personal Website
         </p>

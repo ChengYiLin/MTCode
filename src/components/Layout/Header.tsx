@@ -1,40 +1,40 @@
-import Image from "next/image";
-import Link from "next/link";
-import { FC } from "react";
+import Image from 'next/image';
+import Link from 'next/link';
+import { FC } from 'react';
 
-import DarkModeSwitch from "./DarkModeSwitch";
-import MobileMenu from "./MobileMenu";
+import DarkModeSwitch from './DarkModeSwitch';
+import MobileMenu from './MobileMenu';
 
 const Header: FC = () => {
   return (
-    <header className="fixed inset-x-0 border-b-2 bg-light border-slate-200 dark:bg-dark dark:border-slate-500 z-10">
-      <div className="px-4 sm:px-8 h-14 sm:h-16 box-border py-2 max-w-screen-xl mx-auto flex justify-between items-center">
+    <header className="fixed inset-x-0 z-10 border-b-2 border-slate-200 bg-light dark:border-slate-500 dark:bg-dark">
+      <div className="mx-auto box-border flex h-14 max-w-screen-xl items-center justify-between px-4 py-2 sm:h-16 sm:px-8">
         <Link href="/">
-          <div className="flex items-center gap-2 select-none cursor-pointer hover:text-primary">
-            <div className="w-9 h-9 sm:w-12 sm:h-12 relative">
+          <div className="flex cursor-pointer select-none items-center gap-2 hover:text-primary">
+            <div className="relative h-9 w-9 sm:h-12 sm:w-12">
               <Image src="/logo/rose.png" alt="Logo" fill />
             </div>
-            <span className="text-lg sm:text-[24px] font-bold transition-colors duration-150 text">
+            <span className="text text-lg font-bold transition-colors duration-150 sm:text-[24px]">
               Martin Code
             </span>
           </div>
         </Link>
-        <nav className="sm:flex gap-4 hidden">
+        <nav className="hidden gap-4 sm:flex">
           <Link href="/Blog">
-            <div className="px-4 py-2 hover:text-primary transition-colors duration-150">
+            <div className="px-4 py-2 transition-colors duration-150 hover:text-primary">
               總覽
             </div>
           </Link>
           <Link href="/About">
-            <div className="px-4 py-2 hover:text-primary transition-colors duration-150">
+            <div className="px-4 py-2 transition-colors duration-150 hover:text-primary">
               關於我
             </div>
           </Link>
-          {/* <DarkModeSwitch /> */}
+          <DarkModeSwitch />
         </nav>
-        {/* <div className="sm:hidden flex gap-4">
+        <div className="flex gap-4 sm:hidden">
           <MobileMenu />
-        </div> */}
+        </div>
       </div>
     </header>
   );

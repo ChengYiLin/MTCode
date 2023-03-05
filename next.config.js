@@ -5,9 +5,9 @@ const nextConfig = {
       test: /\.svg$/i,
       issuer: /\.[jt]sx?$/,
       use: ['@svgr/webpack'],
-    })
+    });
 
-    return config
+    return config;
   },
   experimental: {
     appDir: true,
@@ -15,6 +15,6 @@ const nextConfig = {
       { loader: '@next/font/google', options: { subsets: ['latin'] } },
     ],
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

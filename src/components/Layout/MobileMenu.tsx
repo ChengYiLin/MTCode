@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { FC, MouseEvent, useState } from "react";
-import { RiCloseLine, RiMenuFoldLine } from "react-icons/ri";
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { FC, MouseEvent, useState } from 'react';
+import { RiCloseLine, RiMenuFoldLine } from 'react-icons/ri';
 
-import DarkModeSwitch from "./DarkModeSwitch";
+import DarkModeSwitch from './DarkModeSwitch';
 
 const MobileMenu: FC = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -21,36 +21,36 @@ const MobileMenu: FC = () => {
   return (
     <>
       <div className="pl-2" onClick={() => setShowMenu((prev) => !prev)}>
-        <RiMenuFoldLine className="text-2xl cursor-pointer" />
+        <RiMenuFoldLine className="cursor-pointer text-2xl" />
       </div>
       <div
-        className={`fixed inset-0 bg-slate-50/25 dark:bg-slate-400/25 backdrop-blur-lg flex justify-end z-30 ${
-          showMenu ? "translate-x-0" : "translate-x-full"
+        className={`fixed inset-0 z-30 flex justify-end bg-slate-50/25 backdrop-blur-lg dark:bg-slate-400/25 ${
+          showMenu ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         <div className="basis-1/6" onClick={() => setShowMenu(false)} />
         <div
-          className={`basis-5/6 h-full bg-slate-100 dark:bg-slate-800 flex flex-col transition-transform ${
-            showMenu ? "translate-x-0" : "translate-x-full"
+          className={`flex h-full basis-5/6 flex-col bg-slate-100 transition-transform dark:bg-slate-800 ${
+            showMenu ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          <div className="basis-14 box-border px-4 py-3 border-b-2 flex justify-between items-center">
+          <div className="box-border flex basis-14 items-center justify-between border-b-2 px-4 py-3">
             <div>
               <DarkModeSwitch />
             </div>
             <div onClick={() => setShowMenu(false)}>
-              <RiCloseLine className="text-2xl cursor-pointer" />
+              <RiCloseLine className="cursor-pointer text-2xl" />
             </div>
           </div>
           <div className="grow basis-auto">
             <nav>
               <Link href="/Blog">
-                <div className="px-4 py-3 border-b-2 hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer">
+                <div className="cursor-pointer border-b-2 px-4 py-3 hover:bg-slate-200 dark:hover:bg-slate-700">
                   總覽
                 </div>
               </Link>
               <Link href="/About">
-                <div className="px-4 py-3 border-b-2 hover:bg-slate-200  cursor-pointer">
+                <div className="cursor-pointer border-b-2 px-4 py-3  hover:bg-slate-200">
                   關於我
                 </div>
               </Link>

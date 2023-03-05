@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-light text-dark transition-colors duration-150 dark:bg-dark dark:text-light;
+  }
+}
+
+@layer components {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .bg-gradient {
+    @apply bg-gradient-to-br from-blue-300 to-rose-400 dark:from-green-400 dark:to-blue-500;
+  }
+}
