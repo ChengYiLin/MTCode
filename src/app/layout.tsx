@@ -1,6 +1,6 @@
 import '@/style/global.css';
 
-import { Noto_Sans_TC } from '@next/font/google';
+import { Noto_Sans_TC } from 'next/font/google';
 
 import Footer from '@/components/Layout/Footer';
 import Header from '@/components/Layout/Header';
