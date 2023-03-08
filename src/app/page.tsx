@@ -4,7 +4,7 @@ import { BsFillFilePersonFill, BsGithub, BsLinkedin } from 'react-icons/bs';
 export default function Home() {
   return (
     <>
-      <section className="bg-slate-100 dark:bg-slate-800">
+      <section className="bg-slate-50 dark:bg-dark">
         <div className="mx-auto max-w-screen-xl px-4 lg:grid lg:grid-cols-12 lg:items-center lg:gap-4 lg:px-16">
           <div className="py-16 text-center lg:col-span-5">
             <h1 className="text-5xl font-extrabold italic leading-normal lg:text-7xl lg:leading-tight">
@@ -75,7 +75,76 @@ export default function Home() {
                 alt="Martin Lin 林政儀 - Software Engineer"
                 fill
                 style={{ objectFit: 'cover' }}
+                priority
               />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="bg-neutral-900 text-light">
+        <div className="mx-auto flex max-w-screen-xl px-4 py-8">
+          <div className="mx-auto box-border w-11/12 rounded-lg bg-gradient-to-r from-rose-600 to-purple-400 p-1 lg:w-3/4">
+            <div className="box-border rounded-lg bg-neutral-900 px-4 py-4 lg:px-6">
+              <p className="mb-8 text-center text-2xl">
+                Tool I use for Daily Work
+              </p>
+              <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+                <p className="text-lg leading-relaxed">
+                  目前開發上主要是以網頁前端為主， 習慣使用 TypeScript 及 React
+                  進行開發， 並以 Tailwind CSS 進行樣式處理， 會使用 Node.JS
+                  進行一些簡易的後端開發， 並搭配雲端服務 AWS 及 GCP 進行部署
+                </p>
+                <div className="grid grid-cols-4 gap-8 text-5xl">
+                  <Image
+                    src="/assets/techIcon/javascript.png"
+                    width="48"
+                    height="48"
+                    alt="JavaScript"
+                  />
+                  <Image
+                    src="/assets/techIcon/typescript.png"
+                    width="48"
+                    height="48"
+                    alt="TypeScript"
+                  />
+                  <Image
+                    src="/assets/techIcon/react.png"
+                    width="48"
+                    height="48"
+                    alt="React"
+                  />
+                  <Image
+                    src="/assets/techIcon/nextjs.png"
+                    width="48"
+                    height="48"
+                    alt="Next.js"
+                  />
+                  <Image
+                    src="/assets/techIcon/tailwindcss.png"
+                    width="48"
+                    height="48"
+                    alt="Tailwind CSS"
+                  />
+                  <Image
+                    src="/assets/techIcon/nodejs.png"
+                    width="48"
+                    height="48"
+                    alt="Node.js"
+                  />
+                  <Image
+                    src="/assets/techIcon/gcp.png"
+                    width="48"
+                    height="48"
+                    alt="GCP"
+                  />
+                  <Image
+                    src="/assets/techIcon/aws.png"
+                    width="48"
+                    height="48"
+                    alt="AWS"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
