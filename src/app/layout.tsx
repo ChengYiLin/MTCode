@@ -4,6 +4,7 @@ import { Noto_Sans_TC } from 'next/font/google';
 
 import Footer from '@/components/Layout/Footer';
 import Header from '@/components/Layout/Header';
+import metaData from '@/constants/metaData';
 
 const notoSansTC = Noto_Sans_TC({
   weight: ['400', '700'],
@@ -11,6 +12,8 @@ const notoSansTC = Noto_Sans_TC({
   variable: '--font-noto',
   display: 'optional',
 });
+
+export const metadata = metaData;
 
 export default function RootLayout({
   children,
