@@ -7,17 +7,16 @@ export default function Home() {
       <section className="bg-slate-100 dark:bg-slate-800">
         <div className="mx-auto max-w-screen-xl px-4 lg:grid lg:grid-cols-12 lg:items-center lg:gap-4 lg:px-16">
           <div className="py-16 text-center lg:col-span-5">
-            <h1 className="text-5xl font-extrabold leading-tight">
-              Software Engineer
+            <h1 className="text-5xl font-extrabold italic leading-normal lg:text-7xl lg:leading-tight">
+              Martin Lin
+              <br />
+              林政儀
             </h1>
             <h2 className="mx-auto max-w-xs py-12 text-lg">
-              Hi, 我是{' '}
-              <span className="text-xl font-bold text-primary dark:text-secondary">
-                Martin
+              <span className="relative mr-2 inline-block px-1 text-xl before:absolute before:-inset-1 before:block before:-skew-y-12 before:bg-secondary">
+                <span className="relative"> Hi !</span>
               </span>
-              ,
-              <br />
-              來自台灣的軟體工程師
+              我是來自台灣的軟體工程師
               <br />
               熱衷於網頁的前後端開發
               <br />
@@ -28,7 +27,7 @@ export default function Home() {
                 <div className="relative h-16 w-16 overflow-clip rounded-full bg-primary">
                   <Image
                     src="/assets/selfie/selfie_128.png"
-                    alt="selfie"
+                    alt="Martin Lin 林政儀 - Software Engineer"
                     fill
                     className="translate-x-1 translate-y-1"
                   />
@@ -70,10 +69,10 @@ export default function Home() {
             </div>
           </div>
           <div className="pt-0 pb-16 lg:col-span-5 lg:col-start-8 lg:py-8">
-            <div className="bg-gradient relative mx-auto h-80 w-80 overflow-clip rounded-r-3xl rounded-tl-[40%] shadow-[12px_12px_0] shadow-amber-300 dark:shadow-rose-600">
+            <div className="bg-gradient relative mx-auto aspect-square w-80 overflow-clip rounded-r-3xl rounded-tl-[40%] shadow-[12px_12px_0] shadow-amber-300 dark:shadow-rose-600 lg:w-10/12 ">
               <Image
                 src="/assets/selfie/selfie_360.png"
-                alt="selfie"
+                alt="Martin Lin 林政儀 - Software Engineer"
                 fill
                 style={{ objectFit: 'cover' }}
               />
