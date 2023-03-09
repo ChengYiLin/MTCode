@@ -1,8 +1,7 @@
 'use client';
 
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { FC, MouseEvent, useState } from 'react';
+import { FC, useState } from 'react';
 import { RiCloseLine, RiMenuFoldLine } from 'react-icons/ri';
 
 import DarkModeSwitch from './DarkModeSwitch';
@@ -12,8 +11,7 @@ const MobileMenu: FC = () => {
 
   const router = useRouter();
 
-  const handleNavigate = (e: MouseEvent, route: string) => {
-    e.preventDefault();
+  const handleNavigate = (route: string) => {
     router.push(route);
     setShowMenu(false);
   };
@@ -44,16 +42,18 @@ const MobileMenu: FC = () => {
           </div>
           <div className="grow basis-auto">
             <nav>
-              <Link href="/Blog">
-                <div className="cursor-pointer border-b-2 px-4 py-3 hover:bg-slate-200 dark:hover:bg-slate-700">
-                  總覽
-                </div>
-              </Link>
-              <Link href="/About">
-                <div className="cursor-pointer border-b-2 px-4 py-3  hover:bg-slate-200">
-                  關於我
-                </div>
-              </Link>
+              <div
+                className="cursor-pointer border-b-2 px-4 py-3 hover:bg-slate-200 dark:hover:bg-slate-700"
+                onClick={() => handleNavigate('/')}
+              >
+                Home
+              </div>
+              <div
+                className="cursor-pointer border-b-2 px-4 py-3 hover:bg-slate-200 dark:hover:bg-slate-700"
+                onClick={() => handleNavigate('/Blog')}
+              >
+                Blog
+              </div>
             </nav>
           </div>
         </div>

@@ -20,14 +20,14 @@ const Header: FC = () => {
           </div>
         </Link>
         <nav className="hidden gap-4 sm:flex">
-          <Link href="/Blog">
+          <Link href="/">
             <div className="px-4 py-2 transition-colors duration-150 hover:text-primary">
-              總覽
+              Home
             </div>
           </Link>
-          <Link href="/About">
+          <Link href="/Blog">
             <div className="px-4 py-2 transition-colors duration-150 hover:text-primary">
-              關於我
+              Blog
             </div>
           </Link>
           <DarkModeSwitch />
