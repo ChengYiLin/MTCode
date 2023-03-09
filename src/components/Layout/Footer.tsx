@@ -29,9 +29,9 @@ const Footer: FC = () => {
             <a
               className="cursor-pointer text-2xl hover:text-rose-500"
               target="_blank"
-              href="https://github.com/ChengYiLin"
+              href="mailto:cheng.yi.lin.217@gmail.com?subject='Hi Martin'"
               rel="noreferrer"
-              aria-label="Github"
+              aria-label="Gmail"
             >
               <IoMailSharp />
             </a>
