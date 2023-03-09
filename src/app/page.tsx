@@ -82,13 +82,13 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-neutral-900 text-light">
-        <div className="mx-auto flex max-w-screen-xl px-4 py-8">
+        <div className="mx-auto flex max-w-screen-xl px-4 py-20">
           <div className="mx-auto box-border w-11/12 rounded-lg bg-gradient-to-r from-rose-600 to-purple-400 p-1 lg:w-3/4">
-            <div className="box-border rounded-lg bg-neutral-900 px-4 py-4 lg:px-6">
-              <p className="mb-8 text-center text-2xl">
+            <div className="box-border rounded-lg bg-neutral-900 px-4 py-8 lg:px-10">
+              <p className="mb-10 text-center text-2xl">
                 Tool I use for Daily Work
               </p>
-              <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+              <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
                 <p className="text-lg leading-relaxed">
                   目前開發上主要是以網頁前端為主， 習慣使用 TypeScript 及 React
                   進行開發， 並以 Tailwind CSS 進行樣式處理， 會使用 Node.JS
