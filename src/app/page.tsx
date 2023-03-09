@@ -39,7 +39,7 @@ export default function Home() {
               </div>
               <nav className="flex gap-6 px-4">
                 <a
-                  className="cursor-pointer text-2xl hover:text-slate-600"
+                  className="cursor-pointer text-2xl hover:text-slate-600 dark:hover:text-slate-300"
                   target="_blank"
                   href="https://github.com/ChengYiLin"
                   rel="noreferrer"
@@ -48,7 +48,7 @@ export default function Home() {
                   <BsGithub />
                 </a>
                 <a
-                  className="cursor-pointer text-2xl hover:text-sky-600"
+                  className="cursor-pointer text-2xl hover:text-sky-400"
                   target="_blank"
                   href="https://www.linkedin.com/in/cheng-yi-lin/"
                   rel="noreferrer"
@@ -57,7 +57,7 @@ export default function Home() {
                   <BsLinkedin />
                 </a>
                 <a
-                  className="cursor-pointer text-2xl hover:text-rose-600"
+                  className="cursor-pointer text-2xl hover:text-rose-500"
                   target="_blank"
                   href="https://docs.google.com/document/d/1qohyj_emtczFoOeUp8N19ltUTxL33TuP/edit?usp=sharing&ouid=113887428276543602688&rtpof=true&sd=true"
                   rel="noreferrer"
