@@ -11,10 +11,9 @@ const nextConfig = {
   },
   experimental: {
     appDir: true,
-    fontLoaders: [
-      { loader: '@next/font/google', options: { subsets: ['latin'] } },
-    ],
+    mdxRs: true,
   },
 };
 
-module.exports = nextConfig;
+const withMDX = require('@next/mdx')();
+module.exports = withMDX(nextConfig);
