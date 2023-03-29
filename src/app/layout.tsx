@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="zh-TW" className={`${notoSansTC.variable}`}>
       <head />
-      <body className={`${notoSansTC.className}`}>
+      <body className={`${notoSansTC.className} font-sans`}>
         <div className="relative flex min-h-screen flex-col selection:bg-primary selection:text-white">
           <Header />
           <main className="flex-auto pt-14 sm:pt-16">{children}</main>
