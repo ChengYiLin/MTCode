@@ -9,6 +9,9 @@ const nextConfig = {
 
     return config;
   },
+  images: {
+    domains: ['martincode.info', 'cdn.sanity.io'],
+  },
   experimental: {
     appDir: true,
   },
