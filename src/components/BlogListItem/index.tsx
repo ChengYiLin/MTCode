@@ -1,9 +1,10 @@
 import { SanityImageSource } from '@sanity/image-url/lib/types/types';
-import dayjs from 'dayjs';
 import Image from 'next/image';
 import Link from 'next/link';
 import { groq } from 'next-sanity';
 import { FC } from 'react';
+
+import { dateFormate } from '@/lib/date';
 
 export const postsQuery = groq`*[_type == 'post' && !(_id in path("drafts.**"))] {
   "id": _id,
@@ -57,7 +58,7 @@ const BlogListItem: FC<Props> = ({
           <h2 className="text-xl font-bold">{title}</h2>
           <div className="mb-2 mt-1 flex items-center justify-between text-xs">
             <p className="text-slate-400 dark:text-slate-600">
-              {dayjs(createTime).format('YYYY-MM-DD')}
+              {dateFormate(createTime, 'YYYY-MM-DD')}
             </p>
             <div>
               {Array.isArray(categories) &&
