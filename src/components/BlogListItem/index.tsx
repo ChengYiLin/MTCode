@@ -57,7 +57,7 @@ const BlogListItem: FC<Props> = ({
         <div className="p-4">
           <h2 className="text-xl font-bold">{title}</h2>
           <div className="mb-2 mt-1 flex items-center justify-between text-xs">
-            <p className="text-slate-400 dark:text-slate-600">
+            <p className="text-slate-500 dark:text-slate-300">
               {dateFormate(createTime, 'YYYY-MM-DD')}
             </p>
             <div>
