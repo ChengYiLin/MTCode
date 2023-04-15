@@ -4,6 +4,7 @@ import { FC } from 'react';
 
 import DarkModeSwitch from './DarkModeSwitch';
 import MobileMenu from './MobileMenu';
+import NavMenu from './NavList';
 
 const Header: FC = () => {
   return (
@@ -20,16 +21,13 @@ const Header: FC = () => {
           </div>
         </Link>
         <nav className="hidden gap-4 sm:flex">
-          <Link href="/">
-            <div className="px-4 py-2 transition-colors duration-150 hover:text-primary">
-              Home
-            </div>
-          </Link>
-          <Link href="/Blog">
-            <div className="px-4 py-2 transition-colors duration-150 hover:text-primary">
-              Blog
-            </div>
-          </Link>
+          {NavMenu.map((navItem) => (
+            <Link key={navItem.title} href={navItem.path}>
+              <div className="px-4 py-2 transition-colors duration-150 hover:text-primary">
+                {navItem.title}
+              </div>
+            </Link>
+          ))}
           <DarkModeSwitch />
         </nav>
         <div className="flex gap-4 sm:hidden">

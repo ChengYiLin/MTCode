@@ -5,6 +5,7 @@ import { FC, useState } from 'react';
 import { RiCloseLine, RiMenuFoldLine } from 'react-icons/ri';
 
 import DarkModeSwitch from './DarkModeSwitch';
+import NavMenu from './NavList';
 
 const MobileMenu: FC = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -42,18 +43,15 @@ const MobileMenu: FC = () => {
           </div>
           <div className="grow basis-auto">
             <nav>
-              <div
-                className="cursor-pointer border-b-2 px-4 py-3 hover:bg-slate-200 dark:hover:bg-slate-700"
-                onClick={() => handleNavigate('/')}
-              >
-                Home
-              </div>
-              <div
-                className="cursor-pointer border-b-2 px-4 py-3 hover:bg-slate-200 dark:hover:bg-slate-700"
-                onClick={() => handleNavigate('/Blog')}
-              >
-                Blog
-              </div>
+              {NavMenu.map((navItem) => (
+                <div
+                  key={navItem.title}
+                  className="cursor-pointer border-b-2 px-4 py-3 hover:bg-slate-200 dark:hover:bg-slate-700"
+                  onClick={() => handleNavigate(navItem.path)}
+                >
+                  {navItem.title}
+                </div>
+              ))}
             </nav>
           </div>
         </div>
