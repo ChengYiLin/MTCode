@@ -1,7 +1,14 @@
+import { Metadata } from 'next';
+
 import BlogFilter, { categoryQuery, ICategory } from '@/components/BlogFilter';
 import BlogListItem, { IPostInfo, postsQuery } from '@/components/BlogListItem';
+import PageTitle from '@/components/utils/PageTitle';
 import { client } from '@/lib/sanity/client';
 import getImageUrl from '@/lib/sanity/imageUrl';
+
+export const metadata: Metadata = {
+  title: '部落格',
+};
 
 export default async function Blog() {
   const posts: IPostInfo[] = (await client.fetch(postsQuery)) || [];
@@ -9,9 +16,7 @@ export default async function Blog() {
 
   return (
     <>
-      <h1 className="pb-5 pt-7 text-3xl font-bold leading-normal sm:pb-10 sm:pt-14 sm:text-6xl">
-        Blog
-      </h1>
+      <PageTitle>Blog</PageTitle>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-12">
         <div className="grid grid-cols-1 gap-10 sm:col-span-8 sm:col-start-1 lg:grid-cols-2">
           {Array.isArray(posts) && posts.length > 0 ? (

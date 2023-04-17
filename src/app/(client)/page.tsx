@@ -32,7 +32,7 @@ export default function Home() {
                     className="translate-x-1 translate-y-1"
                   />
                 </div>
-                <div className="absolute top-12 right-0 z-[1] h-4 w-4">
+                <div className="absolute right-0 top-12 z-[1] h-4 w-4">
                   <div className="absolute z-[1] h-3 w-3 rounded-full bg-green-300"></div>
                   <div className="absolute h-3 w-3 animate-ping rounded-full bg-green-500"></div>
                 </div>
@@ -68,7 +68,7 @@ export default function Home() {
               </nav>
             </div>
           </div>
-          <div className="pt-0 pb-16 lg:col-span-5 lg:col-start-8 lg:py-8">
+          <div className="pb-16 pt-0 lg:col-span-5 lg:col-start-8 lg:py-8">
             <div className="bg-gradient relative mx-auto aspect-square w-80 overflow-clip rounded-r-3xl rounded-tl-[40%] shadow-[12px_12px_0] shadow-amber-300 dark:shadow-rose-600 lg:w-10/12 ">
               <Image
                 src="/assets/selfie/selfie_360.png"
