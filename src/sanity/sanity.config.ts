@@ -1,6 +1,7 @@
 import { visionTool } from '@sanity/vision';
 import { defineConfig } from 'sanity';
 import { deskTool } from 'sanity/desk';
+import { markdownSchema } from 'sanity-plugin-markdown';
 
 import { schemaTypes } from './schemas';
 
@@ -13,7 +14,7 @@ export default defineConfig({
   title: 'Martin Code',
   projectId,
   dataset,
-  plugins: [deskTool(), visionTool()],
+  plugins: [deskTool(), visionTool(), markdownSchema()],
   schema: {
     types: schemaTypes,
   },

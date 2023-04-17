@@ -11,6 +11,11 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'subTitle',
+      title: 'SubTitle',
+      type: 'string',
+    }),
+    defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -49,11 +54,11 @@ export default defineType({
       title: 'Abstract',
       type: 'string',
     }),
-    defineField({
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
-    }),
+    {
+      name: 'blog',
+      description: 'Blog Content',
+      type: 'markdown',
+    },
   ],
 
   preview: {
