@@ -1,4 +1,4 @@
-// components/mdx-remote.js
+import Image from 'next/image';
 import Link from 'next/link';
 import { MDXRemote, MDXRemoteProps } from 'next-mdx-remote/rsc';
 
@@ -30,6 +30,14 @@ const CustomMDX = (props: MDXRemoteProps) => {
             <div className="text-lg text-slate-400">{children}</div>
           </blockquote>
         ),
+        img: ({ src, alt }) =>
+          src ? (
+            <span className="relative block aspect-gold w-full">
+              <Image fill src={src} alt={alt || ''} />
+            </span>
+          ) : (
+            <></>
+          ),
       }}
     />
   );

@@ -14,6 +14,9 @@ module.exports = {
         dark: '#23272f',
         light: '#FBF9FA',
       },
+      aspectRatio: {
+        gold: '8/5',
+      },
     },
   },
   plugins: [],

@@ -43,7 +43,7 @@ export default async function Blog({
 
       <p>{dateFormate(post.createTime, 'YYYY-MM-DD')}</p>
 
-      <div className="w-3/4 py-8">
+      <div className="w-full py-8 sm:w-3/4">
         <CustomMDX source={post.blog} />
       </div>
     </div>
