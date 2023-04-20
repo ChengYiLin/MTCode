@@ -10,6 +10,20 @@ interface IPostInfo {
   blog: string;
 }
 
+export const revalidate = 300;
+
+export async function generateStaticParams() {
+  const slugList: { slug: string }[] = await client.fetch(
+    `*[_type == 'post' && !(_id in path("drafts.**"))] {
+      "slug": slug.current,
+    }`,
+  );
+
+  return slugList.map((item) => ({
+    slug: item.slug,
+  }));
+}
+
 export default async function Blog({
   params,
 }: {
