@@ -1,17 +1,61 @@
+import { Metadata } from 'next/types';
+import { cache } from 'react';
 import CustomMDX from '@/components/CustomMDX';
 import PageTitle from '@/components/utils/PageTitle';
 import { dateFormate } from '@/lib/date';
 import { client } from '@/lib/sanity/client';
-interface IPostInfo {
-  title: string;
-  subTitle: string;
-  slug: string;
-  createTime: Date;
-  blog: string;
+
+interface IPageParams {
+  params: {
+    slug: string;
+  };
 }
 
+/**
+ * @description Use `cache` to prevent deduplicate request
+ * @reference https://beta.nextjs.org/docs/data-fetching/caching#graphql-and-cache
+ */
+const getPostInfo = cache(async (slug: string) => {
+  const res: {
+    title: string;
+    subTitle: string;
+    slug: string;
+    createTime: Date;
+    blog: string;
+  } = await client.fetch(
+    `*[_type == 'post' && (slug.current in path("${slug}"))][0]{
+      title,
+      subTitle,
+      "slug": slug.current,
+      createTime,
+      blog
+    }`,
+  );
+
+  return res;
+});
+
+/**
+ * @description Handle Dynamic Metadata
+ * @reference https://beta.nextjs.org/docs/guides/seo#dynamic-metadata
+ */
+export async function generateMetadata({
+  params,
+}: IPageParams): Promise<Metadata> {
+  const postInfo = await getPostInfo(params.slug);
+  return { title: postInfo.title };
+}
+
+/**
+ * @description Revalidation time for a layout or page
+ * @reference https://beta.nextjs.org/docs/api-reference/segment-config#revalidate
+ */
 export const revalidate = 300;
 
+/**
+ * @description Statically generate dynamic route
+ * @reference https://beta.nextjs.org/docs/api-reference/generate-static-params
+ */
 export async function generateStaticParams() {
   const slugList: { slug: string }[] = await client.fetch(
     `*[_type == 'post' && !(_id in path("drafts.**"))] {
@@ -24,23 +68,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Blog({
-  params,
-}: {
-  params: {
-    slug: string;
-  };
-}) {
+export default async function Blog({ params }: IPageParams) {
   const { slug } = params;
-  const post: IPostInfo = await client.fetch(
-    `*[_type == 'post' && (slug.current in path("${slug}"))][0]{
-      title,
-      subTitle,
-      "slug": slug.current,
-      createTime,
-      blog
-    }`,
-  );
+  const post = await getPostInfo(slug);
 
   return (
     <div>
