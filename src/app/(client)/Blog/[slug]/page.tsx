@@ -1,6 +1,8 @@
 import { Metadata } from 'next/types';
 import { cache } from 'react';
+
 import CustomMDX from '@/components/CustomMDX';
+import GiscusComment from '@/components/GiscusComment';
 import PageTitle from '@/components/utils/PageTitle';
 import { dateFormate } from '@/lib/date';
 import { client } from '@/lib/sanity/client';
@@ -89,6 +91,10 @@ export default async function Blog({ params }: IPageParams) {
 
       <div className="w-full py-8 sm:w-3/4">
         <CustomMDX source={post.blog} />
+
+        <div className="py-8">
+          <GiscusComment />
+        </div>
       </div>
     </div>
   );
