@@ -4,6 +4,8 @@ import { Noto_Sans_TC } from 'next/font/google';
 
 import metaData from '@/constants/metaData';
 
+import Providers from './provider';
+
 const notoSansTC = Noto_Sans_TC({
   weight: ['400', '700'],
   subsets: ['latin'],
@@ -21,7 +23,9 @@ export default function RootLayout({
   return (
     <html lang="zh-TW" className={`${notoSansTC.variable}`}>
       <head />
-      <body className={`${notoSansTC.className} font-sans`}>{children}</body>
+      <body className={`${notoSansTC.className} font-sans`}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
