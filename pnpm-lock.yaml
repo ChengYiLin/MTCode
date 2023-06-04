@@ -8,6 +8,9 @@ dependencies:
   '@next/mdx':
     specifier: ^13.4.4
     version: 13.4.4
+  '@vercel/analytics':
+    specifier: ^1.0.1
+    version: 1.0.1
   dayjs:
     specifier: ^1.11.8
     version: 1.11.8
@@ -491,6 +494,10 @@ packages:
       '@typescript-eslint/types': 5.59.8
       eslint-visitor-keys: 3.4.1
     dev: true
+
+  /@vercel/analytics@1.0.1:
+    resolution: {integrity: sha512-Ux0c9qUfkcPqng3vrR0GTrlQdqNJ2JREn/2ydrVuKwM3RtMfF2mWX31Ijqo1opSjNAq6rK76PwtANw6kl6TAow==}
+    dev: false
 
   /acorn-jsx@5.3.2(acorn@8.8.2):
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}

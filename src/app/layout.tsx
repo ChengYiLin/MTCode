@@ -1,5 +1,6 @@
 import '@/style/global.css';
 
+import { Analytics } from '@vercel/analytics/react';
 import { Noto_Sans_TC } from 'next/font/google';
 import Script from 'next/script';
 
@@ -36,7 +37,10 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={`${notoSansTC.className} font-sans`}>{children}</body>
+      <body className={`${notoSansTC.className} font-sans`}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
