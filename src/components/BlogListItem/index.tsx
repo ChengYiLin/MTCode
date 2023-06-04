@@ -1,26 +1,14 @@
-import { SanityImageSource } from '@sanity/image-url/lib/types/types';
 import Image from 'next/image';
 import Link from 'next/link';
-import { groq } from 'next-sanity';
 import { FC } from 'react';
 
 import { dateFormate } from '@/lib/date';
-
-export const postsQuery = groq`*[_type == 'post' && !(_id in path("drafts.**"))] {
-  "id": _id,
-  "slug": slug.current,
-  title,
-  mainImage,
-  createTime,
-  "categories": categories[] -> title,
-  abstract,
-}`;
 
 export interface IPostInfo {
   id: string;
   slug: string;
   title: string;
-  mainImage: SanityImageSource;
+  mainImage: string;
   createTime: Date;
   categories: string[];
   abstract: string;

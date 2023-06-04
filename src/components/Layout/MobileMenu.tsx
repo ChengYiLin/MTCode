@@ -4,7 +4,6 @@ import { useRouter } from 'next/navigation';
 import { FC, useState } from 'react';
 import { RiCloseLine, RiMenuFoldLine } from 'react-icons/ri';
 
-import DarkModeSwitch from './DarkModeSwitch';
 import NavMenu from './NavList';
 
 const MobileMenu: FC = () => {
@@ -34,9 +33,6 @@ const MobileMenu: FC = () => {
           }`}
         >
           <div className="box-border flex basis-14 items-center justify-between border-b-2 px-4 py-3">
-            <div>
-              <DarkModeSwitch />
-            </div>
             <div onClick={() => setShowMenu(false)}>
               <RiCloseLine className="cursor-pointer text-2xl" />
             </div>

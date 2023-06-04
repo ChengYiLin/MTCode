@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 
 const metaData: Metadata = {
+  metadataBase: new URL('https://www.martincode.info'),
   title: {
     default: 'Martin 軟體工程師 - Web 前後端開發、雲端、技術筆記',
     template: '%s | Martin 軟體工程師 - Web 前後端開發、雲端、技術筆記',
@@ -20,16 +21,24 @@ const metaData: Metadata = {
     title: 'Martin 軟體工程師',
     description:
       '我是 Martin,一名非資訊工程背景轉職的軟體工程師,熟習 JavaScript 及 React 進行前端開發,目前也正在學習後端及雲端相關技術,朝全面的軟體工程師邁進',
-    url: 'https://www.martincode.info/',
+    url: '/',
     siteName: 'Martin Code',
     images: [
       {
-        url: 'https://www.martincode.info/favicon/icon-512x512.png',
+        url: '/favicon/icon-512x512.png',
         width: 512,
         height: 512,
       },
     ],
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Martin 軟體工程師',
+    description:
+      '我是 Martin,一名非資訊工程背景轉職的軟體工程師,熟習 JavaScript 及 React 進行前端開發,目前也正在學習後端及雲端相關技術,朝全面的軟體工程師邁進',
+    creator: '@MartinLin',
+    images: ['/favicon/icon-512x512.png'],
   },
   themeColor: '#0f182b',
   icons: {

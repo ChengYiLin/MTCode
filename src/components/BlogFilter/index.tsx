@@ -1,10 +1,4 @@
-import { groq } from 'next-sanity';
 import { FC } from 'react';
-
-export const categoryQuery = groq`*[_type == 'category' && !(_id in path("drafts.**"))] {
-  "id": _id,
-  title
-}`;
 
 export interface ICategory {
   id: string;

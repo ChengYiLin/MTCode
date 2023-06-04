@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
-import DarkModeSwitch from './DarkModeSwitch';
 import MobileMenu from './MobileMenu';
 import NavMenu from './NavList';
 
@@ -28,7 +27,6 @@ const Header: FC = () => {
               </div>
             </Link>
           ))}
-          <DarkModeSwitch />
         </nav>
         <div className="flex gap-4 sm:hidden">
           <MobileMenu />

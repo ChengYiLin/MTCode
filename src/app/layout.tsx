@@ -5,8 +5,6 @@ import Script from 'next/script';
 
 import metaData from '@/constants/metaData';
 
-import Providers from './provider';
-
 const notoSansTC = Noto_Sans_TC({
   weight: ['400', '700'],
   subsets: ['latin'],
@@ -38,9 +36,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={`${notoSansTC.className} font-sans`}>
-        <Providers>{children}</Providers>
-      </body>
+      <body className={`${notoSansTC.className} font-sans`}>{children}</body>
     </html>
   );
 }
