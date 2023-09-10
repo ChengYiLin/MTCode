@@ -1,15 +1,35 @@
 {
-  "name": "martin-code",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^3.0.12"
-  }
+    "name": "martin-code",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro",
+        "eslint": "prettier --write . && eslint --ext .js,.astro src"
+    },
+    "prettier": {
+        "plugins": [
+            "prettier-plugin-astro"
+        ],
+        "trailingComma": "es5",
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": true
+    },
+    "dependencies": {
+        "astro": "^3.0.12"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^6.6.0",
+        "@typescript-eslint/parser": "^6.6.0",
+        "eslint": "^8.49.0",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-astro": "^0.29.0",
+        "eslint-plugin-jsx-a11y": "^6.7.1",
+        "prettier": "^3.0.3",
+        "prettier-plugin-astro": "^0.12.0"
+    }
 }
