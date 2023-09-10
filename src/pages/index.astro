@@ -1,16 +1,11 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Greeting from '../components/Greeting.tsx'
 
+const pageTitle = 'Home Page ~~'
 ---
 
-<html lang="zh-tw">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Astro</title>
-    </head>
-    <body>
-        <h1>Astro 123</h1>
-    </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+    <Greeting client:visible messages={['Hi', 'Hello', 'Howdy', 'Hey there']} />
+    <h2>My awesome blog subtitle !!!</h2>
+</BaseLayout>
