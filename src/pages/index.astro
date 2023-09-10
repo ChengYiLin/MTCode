@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Greeting from '../components/Greeting.tsx'
+
+const pageTitle = 'Home Page ~~'
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <Greeting client:visible messages={['Hi', 'Hello', 'Howdy', 'Hey there']} />
+    <h2>My awesome blog subtitle !!!</h2>
+</BaseLayout>
