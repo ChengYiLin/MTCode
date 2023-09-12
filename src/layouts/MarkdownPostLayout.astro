@@ -1,4 +1,18 @@
 ---
+interface Props {
+    frontmatter: {
+        title: string;
+        description: string;
+        pubDate: string;
+        image: {
+            url: string;
+            alt: string;
+        },
+        tags: string[];
+        author: string;
+    }
+}
+
 import BaseLayout from './BaseLayout.astro'
 const { frontmatter } = Astro.props
 ---

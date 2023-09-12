@@ -1,6 +1,15 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 
+interface Props {
+    posts: {
+        url: string;
+        frontmatter: {
+            title: string
+        }
+    }[];
+}
+
 export async function getStaticPaths() {
     const allPosts = await Astro.glob('../posts/*.md')
 
