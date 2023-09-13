@@ -8,7 +8,7 @@
         "build": "astro check && tsc --noEmit && astro build",
         "preview": "astro preview",
         "astro": "astro",
-        "eslint": "prettier --write . && eslint --ext .js,.astro src"
+        "eslint": "prettier --write . && eslint --fix --ext .js,.astro src"
     },
     "prettier": {
         "plugins": [
@@ -39,6 +39,7 @@
         "eslint-config-prettier": "^9.0.0",
         "eslint-plugin-astro": "^0.29.0",
         "eslint-plugin-jsx-a11y": "^6.7.1",
+        "eslint-plugin-simple-import-sort": "^10.0.0",
         "prettier": "^3.0.3",
         "prettier-plugin-astro": "^0.12.0"
     }
