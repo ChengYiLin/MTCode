@@ -1,13 +1,14 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro'
+import BaseLayout from '@layouts/BaseLayout.astro'
+import Container from '@layouts/Container.astro'
 
 interface Props {
     posts: {
-        url: string;
+        url: string
         frontmatter: {
             title: string
         }
-    }[];
+    }[]
 }
 
 export async function getStaticPaths() {
@@ -32,16 +33,18 @@ const { tag } = Astro.params
 const { posts } = Astro.props
 ---
 
-<BaseLayout pageTitle={tag}>
-    <p>Posts tagged with {tag}</p>
+<BaseLayout pageTitle={tag || 'Tag'}>
+    <Container>
+        <p>Posts tagged with {tag}</p>
 
-    <ul>
-        {
-            posts.map((post) => (
-                <li>
-                    <a href={post.url}>{post.frontmatter.title}</a>
-                </li>
-            ))
-        }
-    </ul>
+        <ul>
+            {
+                posts.map((post) => (
+                    <li>
+                        <a href={post.url}>{post.frontmatter.title}</a>
+                    </li>
+                ))
+            }
+        </ul>
+    </Container>
 </BaseLayout>

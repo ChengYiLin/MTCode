@@ -1,0 +1,48 @@
+---
+import Container from '@layouts/Container.astro'
+
+interface NavLink {
+    text: string
+    link: string
+}
+
+const navLinkList: NavLink[] = [
+    {
+        text: 'Home',
+        link: '/',
+    },
+    {
+        text: 'Blog',
+        link: '/blog',
+    },
+    {
+        text: 'About',
+        link: '/about',
+    },
+]
+---
+
+<header class="fixed inset-x-0">
+    <Container>
+        <div class="flex justify-between py-4">
+            <a href="/" rel="noreferrer noopener">
+                <p class="text-2xl font-semibold">Martin Code</p>
+            </a>
+            <nav class="list-none flex gap-8">
+                {
+                    navLinkList.map((navLink) => (
+                        <li>
+                            <a
+                                class="text-lg"
+                                href={navLink.link}
+                                rel="noreferrer noopener"
+                            >
+                                {navLink.text}
+                            </a>
+                        </li>
+                    ))
+                }
+            </nav>
+        </div>
+    </Container>
+</header>
