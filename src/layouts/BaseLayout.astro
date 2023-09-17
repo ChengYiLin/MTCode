@@ -5,10 +5,15 @@ import Footer from '../components/Footer/index.astro'
 import Header from '../components/Header/index.astro'
 
 interface Props {
-    pageTitle: string
+    pageTitle?: string
+    description?: string
 }
 
-const { pageTitle } = Astro.props
+const getPageTitle = (pageTitle?: string) =>
+    pageTitle ? `${pageTitle} - Martin Code` : 'Martin Code - 軟體開發 職涯發展'
+const DEFAULT_DESCRIPTION =
+    '我是 Martin, 一名網頁前端工程師! 這裡我會分享自己的工作經驗及前後端開發的大小事。讓我們一同學習、分享、成長，無論你是新手還是資深開發者，都歡迎來參與!'
+const { pageTitle, description } = Astro.props
 ---
 
 <html lang="zh-tw">
@@ -17,8 +22,13 @@ const { pageTitle } = Astro.props
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
-        <title>{pageTitle}</title>
-        <meta name="description" content="" />
+        <title>{getPageTitle(pageTitle)}</title>
+        <meta property="og:title" content={getPageTitle(pageTitle)} />
+        <meta name="description" content={description || DEFAULT_DESCRIPTION} />
+        <meta
+            property="og:description"
+            content={description || DEFAULT_DESCRIPTION}
+        />
     </head>
     <body class="flex flex-col min-h-screen">
         <Header />

@@ -28,20 +28,22 @@ const navLinkList: NavLink[] = [
             <a href="/" rel="noreferrer noopener">
                 <p class="text-2xl font-semibold">Martin Code</p>
             </a>
-            <nav class="list-none flex gap-8">
-                {
-                    navLinkList.map((navLink) => (
-                        <li>
-                            <a
-                                class="text-lg"
-                                href={navLink.link}
-                                rel="noreferrer noopener"
-                            >
-                                {navLink.text}
-                            </a>
-                        </li>
-                    ))
-                }
+            <nav>
+                <ul class="list-none flex gap-8">
+                    {
+                        navLinkList.map((navLink) => (
+                            <li>
+                                <a
+                                    class="text-lg"
+                                    href={navLink.link}
+                                    rel="noreferrer noopener"
+                                >
+                                    {navLink.text}
+                                </a>
+                            </li>
+                        ))
+                    }
+                </ul>
             </nav>
         </div>
     </Container>
