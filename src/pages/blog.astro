@@ -8,15 +8,17 @@ const pageTitle = '部落格 Blog'
 
 <BaseLayout pageTitle={pageTitle}>
     <Container>
-        <h1>Blog</h1>
-        <ul>
-            {
-                allPosts.map((post) => (
-                    <li>
-                        <a href={post.url}>{post.frontmatter.title}</a>
-                    </li>
-                ))
-            }
-        </ul>
+        <div class="py-6">
+            <h1>Blog</h1>
+            <ul>
+                {
+                    allPosts.map((post) => (
+                        <li>
+                            <a href={post.url}>{post.frontmatter.title}</a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
     </Container>
 </BaseLayout>

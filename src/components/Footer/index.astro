@@ -1,11 +1,18 @@
 ---
 import Container from '@layouts/Container.astro'
+
+import SocialLinks from './SocialLinks.astro'
 ---
 
-<footer class="py-4">
+<footer>
     <Container>
-        <p class="text-center text-slate-500">
-            Copyright © 2023 Martin Code Blog
-        </p>
+        <div
+            class="flex flex-col items-center gap-4 border-t-2 border-slate-500 py-6 sm:flex-row sm:justify-between"
+        >
+            <p class="order-last text-slate-500 sm:order-first">
+                Copyright © 2023 Martin Code Blog
+            </p>
+            <SocialLinks />
+        </div>
     </Container>
 </footer>

@@ -29,10 +29,14 @@ const { pageTitle, description } = Astro.props
             property="og:description"
             content={description || DEFAULT_DESCRIPTION}
         />
+        <!-- Font Awesome -->
+        <script
+            src="https://kit.fontawesome.com/29414a2aa0.js"
+            crossorigin="anonymous"></script>
     </head>
-    <body class="flex flex-col min-h-screen">
+    <body class="flex min-h-screen flex-col">
         <Header />
-        <main class="pt-16 flex-auto">
+        <main class="flex-auto pt-20">
             <slot />
         </main>
         <Footer />
