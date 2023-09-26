@@ -1,48 +1,48 @@
 {
-    "name": "martin-code",
-    "type": "module",
-    "version": "0.0.1",
-    "scripts": {
-        "dev": "astro dev",
-        "start": "astro dev",
-        "build": "astro check && tsc --noEmit && astro build",
-        "preview": "astro preview",
-        "astro": "astro",
-        "eslint": "prettier --write . && eslint --fix --ext .js,.astro src"
-    },
-    "prettier": {
-        "plugins": [
-            "prettier-plugin-astro",
-            "prettier-plugin-tailwindcss"
-        ],
-        "trailingComma": "es5",
-        "tabWidth": 4,
-        "semi": false,
-        "singleQuote": true
-    },
-    "dependencies": {
-        "@astrojs/check": "^0.2.0",
-        "@astrojs/react": "^3.0.2",
-        "@astrojs/rss": "^3.0.0",
-        "@astrojs/tailwind": "^5.0.0",
-        "astro": "^3.1.1",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "tailwindcss": "^3.3.3"
-    },
-    "devDependencies": {
-        "@types/react": "^18.2.22",
-        "@types/react-dom": "^18.2.7",
-        "@typescript-eslint/eslint-plugin": "^6.7.2",
-        "@typescript-eslint/parser": "^6.7.2",
-        "eslint": "^8.49.0",
-        "eslint-config-prettier": "^9.0.0",
-        "eslint-plugin-astro": "^0.29.0",
-        "eslint-plugin-jsx-a11y": "^6.7.1",
-        "eslint-plugin-simple-import-sort": "^10.0.0",
-        "prettier": "^3.0.3",
-        "prettier-plugin-astro": "^0.12.0",
-        "prettier-plugin-tailwindcss": "^0.5.4",
-        "typescript": "^5.2.2"
-    }
+  "name": "martin-code",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && tsc --noEmit && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "eslint": "prettier --write . && eslint --fix"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-astro",
+      "prettier-plugin-tailwindcss"
+    ],
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.2.0",
+    "@astrojs/react": "^3.0.2",
+    "@astrojs/rss": "^3.0.0",
+    "@astrojs/tailwind": "^5.0.0",
+    "astro": "^3.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.22",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-astro": "^0.29.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.0",
+    "prettier-plugin-tailwindcss": "^0.5.4",
+    "typescript": "^5.2.2"
+  }
 }

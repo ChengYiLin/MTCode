@@ -2,36 +2,36 @@
 import { FAIcon } from '@constant/icon'
 
 interface socialLinkItem {
-    link: string
-    icon: string
+  link: string
+  icon: string
 }
 
 const SOCIAL_LINKS: socialLinkItem[] = [
-    {
-        link: 'https://www.linkedin.com/in/cheng-yi-lin/',
-        icon: FAIcon.linkedin,
-    },
-    {
-        link: 'https://github.com/ChengYiLin',
-        icon: FAIcon.github,
-    },
-    {
-        link: 'https://www.instagram.com/mtcode.tw/',
-        icon: FAIcon.instagram,
-    },
+  {
+    link: 'https://www.linkedin.com/in/cheng-yi-lin/',
+    icon: FAIcon.linkedin,
+  },
+  {
+    link: 'https://github.com/ChengYiLin',
+    icon: FAIcon.github,
+  },
+  {
+    link: 'https://www.instagram.com/mtcode.tw/',
+    icon: FAIcon.instagram,
+  },
 ]
 ---
 
 <nav class="text-slate-800">
-    <ul class="flex gap-8 text-xl">
-        {
-            SOCIAL_LINKS.map(({ link, icon }) => (
-                <li>
-                    <a href={link} target="_blank" rel="noreferrer noopener">
-                        <i class={icon} />
-                    </a>
-                </li>
-            ))
-        }
-    </ul>
+  <ul class="flex gap-8 text-xl">
+    {
+      SOCIAL_LINKS.map(({ link, icon }) => (
+        <li>
+          <a href={link} target="_blank" rel="noreferrer noopener">
+            <i class={icon} />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
 </nav>
