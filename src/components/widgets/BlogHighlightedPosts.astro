@@ -1,12 +1,12 @@
 ---
-import { APP_BLOG } from "~/utils/config";
+import { APP_BLOG } from '~/utils/config';
 
-import Grid from "~/components/blog/Grid.astro";
+import Grid from '~/components/blog/Grid.astro';
 
-import { getBlogPermalink } from "~/utils/permalinks";
-import { findPostsByIds } from "~/utils/blog";
-import WidgetWrapper from "~/components/ui/WidgetWrapper.astro";
-import type { Widget } from "~/types";
+import { getBlogPermalink } from '~/utils/permalinks';
+import { findPostsByIds } from '~/utils/blog';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import type { Widget } from '~/types';
 
 export interface Props extends Widget {
   title?: string;
@@ -17,16 +17,16 @@ export interface Props extends Widget {
 }
 
 const {
-  title = await Astro.slots.render("title"),
-  linkText = "View all posts",
+  title = await Astro.slots.render('title'),
+  linkText = 'View all posts',
   linkUrl = getBlogPermalink(),
-  information = await Astro.slots.render("information"),
+  information = await Astro.slots.render('information'),
   postIds = [],
 
   id,
   isDark = false,
   classes = {},
-  bg = await Astro.slots.render("bg"),
+  bg = await Astro.slots.render('bg'),
 } = Astro.props;
 
 const posts = APP_BLOG.isEnabled ? await findPostsByIds(postIds) : [];
@@ -35,16 +35,16 @@ const posts = APP_BLOG.isEnabled ? await findPostsByIds(postIds) : [];
 {
   APP_BLOG.isEnabled ? (
     <WidgetWrapper id={id} isDark={isDark} containerClass={classes?.container} bg={bg}>
-      <div class="flex flex-col lg:justify-between lg:flex-row mb-8">
+      <div class="mb-8 flex flex-col lg:flex-row lg:justify-between">
         {title && (
           <div class="md:max-w-sm">
             <h2
-              class="text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none group font-heading mb-2"
+              class="group mb-2 font-heading text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none"
               set:html={title}
             />
             {APP_BLOG.list.isEnabled && linkText && linkUrl && (
               <a
-                class="text-muted dark:text-slate-400 hover:text-primary transition ease-in duration-200 block mb-6 lg:mb-0"
+                class="mb-6 block text-muted transition duration-200 ease-in hover:text-primary dark:text-slate-400 lg:mb-0"
                 href={linkUrl}
               >
                 {linkText} »
@@ -53,7 +53,7 @@ const posts = APP_BLOG.isEnabled ? await findPostsByIds(postIds) : [];
           </div>
         )}
 
-        {information && <p class="text-muted dark:text-slate-400 lg:text-sm lg:max-w-md" set:html={information} />}
+        {information && <p class="text-muted dark:text-slate-400 lg:max-w-md lg:text-sm" set:html={information} />}
       </div>
 
       <Grid posts={posts} />
