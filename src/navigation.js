@@ -75,7 +75,7 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/mtcode.tw/' },
+    // { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/mtcode.tw/' },
     {
       ariaLabel: 'Facebook',
       icon: 'tabler:brand-facebook',
