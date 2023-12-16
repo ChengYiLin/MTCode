@@ -16,11 +16,6 @@ const siteMetadata = {
   twitter: 'https://twitter.com/zy7786',
   linkedin: 'https://www.linkedin.com/in/cheng-yi-lin',
   locale: 'zh-TW',
-  analytics: {
-    googleAnalytics: {
-      googleAnalyticsId: 'G-9E073G8KPV',
-    },
-  },
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
     // Please add your .env file and modify it according to your selection

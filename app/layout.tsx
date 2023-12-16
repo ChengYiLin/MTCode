@@ -9,6 +9,7 @@ import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
+import Script from 'next/script'
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -85,6 +86,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </SectionContainer>
         </ThemeProviders>
+        {/* Google Analytics */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-9E073G8KPV"></Script>
+        <Script id="google-analytics">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-9E073G8KPV');
+        `}
+        </Script>
       </body>
     </html>
   )
