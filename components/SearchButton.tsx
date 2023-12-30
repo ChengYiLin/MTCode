@@ -1,5 +1,5 @@
 import { KBarButton } from 'pliny/search/KBarButton'
-import siteMetadata from '@/data/siteMetadata'
+import siteMetadata from '@/data/site/siteMetadata'
 
 const SearchButton = () => {
   if (siteMetadata.search && siteMetadata.search.provider === 'kbar') {
