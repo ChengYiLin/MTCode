@@ -1,6 +1,6 @@
 import 'css/tailwind.css'
 
-import { Space_Grotesk } from 'next/font/google'
+import { Noto_Sans_TC } from 'next/font/google'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '@/components/Header'
@@ -11,10 +11,12 @@ import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import Script from 'next/script'
 
-const space_grotesk = Space_Grotesk({
-  subsets: ['latin'],
+const noto_sans_tc = Noto_Sans_TC({
+  weight: '400',
+  preload: true,
   display: 'swap',
-  variable: '--font-space-grotesk',
+  subsets: ['latin'],
+  variable: '--font-noto_sans_tc',
 })
 
 export const metadata: Metadata = {
@@ -61,7 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang={siteMetadata.language}
-      className={`${space_grotesk.variable} scroll-smooth`}
+      className={`${noto_sans_tc.variable} scroll-smooth`}
       suppressHydrationWarning
     >
       <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />
