@@ -28,15 +28,15 @@ export default function PostMinimal({ content, next, prev, children }: LayoutPro
       <article>
         <div>
           <div className="space-y-1 pb-10 text-center dark:border-gray-700">
+            <div className="relative pt-10">
+              <PageTitle>{title}</PageTitle>
+            </div>
             <div className="w-full">
               <Bleed>
                 <div className="relative aspect-[2/1] w-full">
                   <Image src={displayImage} alt={title} fill className="object-cover" />
                 </div>
               </Bleed>
-            </div>
-            <div className="relative pt-10">
-              <PageTitle>{title}</PageTitle>
             </div>
           </div>
           <div className="prose max-w-none py-4 dark:prose-invert">{children}</div>
