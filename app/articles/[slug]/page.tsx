@@ -32,8 +32,11 @@ export default async function ArticlePage({ params }: Props) {
   return (
     <article>
       {/* Cover */}
-      <MediaPlaceholder iconSize={56} className="h-[210px] w-full overflow-hidden rounded-hh-m sm:h-[360px]">
-        <span className="absolute bottom-2.5 right-3 rounded-hh-s bg-black/45 px-2 py-0.5 text-xs text-white">
+      <MediaPlaceholder
+        iconSize={56}
+        className="h-[210px] w-full overflow-hidden rounded-hh-m sm:h-[360px]"
+      >
+        <span className="absolute right-3 bottom-2.5 rounded-hh-s bg-black/45 px-2 py-0.5 text-xs text-white">
           credit: placeholder
         </span>
       </MediaPlaceholder>
@@ -41,7 +44,14 @@ export default async function ArticlePage({ params }: Props) {
       {/* Breadcrumb */}
       <div className="my-[18px] mt-6 flex items-center gap-2 text-sm text-hh-text-secondary">
         <Link href="/" className="inline-flex items-center gap-[5px]">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+          >
             <path d="M3 10l9-7 9 7v10a1 1 0 0 1-1 1h-5v-7h-6v7H4a1 1 0 0 1-1-1z" />
           </svg>
           首頁
@@ -55,17 +65,33 @@ export default async function ArticlePage({ params }: Props) {
       </div>
 
       {/* Title + meta */}
-      <h1 className="mb-4 text-[34px] font-semibold leading-[1.3]">{post.title}</h1>
+      <h1 className="mb-4 text-[34px] leading-[1.3] font-semibold">
+        {post.title}
+      </h1>
       <div className="mb-7 flex items-center gap-[18px] border-b border-black/[.08] pb-6 text-sm text-hh-text-secondary">
         <span className="inline-flex items-center gap-1.5">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.7"
+          >
             <rect x="3" y="4" width="18" height="17" rx="2" />
             <path d="M3 9h18M8 2v4M16 2v4" />
           </svg>
           {post.date}
         </span>
         <span className="inline-flex items-center gap-1.5">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.7"
+          >
             <path d="M4 4h16v16H4z" />
             <path d="M8 8h8M8 12h8M8 16h5" />
           </svg>
@@ -82,11 +108,14 @@ export default async function ArticlePage({ params }: Props) {
         <p className="mb-[22px]">
           在開始之前，先講一個前提：工具會一直變，但背後的思考方式不太會。所以這篇我會盡量聊「為什麼這樣做」，而不只是「怎麼做」。畢竟照著步驟做很容易，難的是知道什麼時候該換條路走。
         </p>
-        <h2 className="mb-4 mt-9 text-2xl font-semibold">為什麼要重新思考？</h2>
+        <h2 className="mt-9 mb-4 text-2xl font-semibold">為什麼要重新思考？</h2>
         <p className="mb-[22px]">
-          過去我習慣先把功能做出來再說，文件、測試、規格都是事後補的。這在一個人寫小專案時沒什麼問題，但只要協作的人一多，或是把 AI 拉進流程裡，這套做法就會開始出包。
+          過去我習慣先把功能做出來再說，文件、測試、規格都是事後補的。這在一個人寫小專案時沒什麼問題，但只要協作的人一多，或是把
+          AI 拉進流程裡，這套做法就會開始出包。
         </p>
-        <h3 className="mb-3.5 mt-[30px] text-xl font-semibold">三個我最常踩的坑</h3>
+        <h3 className="mt-[30px] mb-3.5 text-xl font-semibold">
+          三個我最常踩的坑
+        </h3>
         <ul className="mb-[22px] list-disc pl-[22px]">
           <li className="mb-2.5">
             需求說不清楚，做到一半才發現方向錯了 — 這時用{" "}
@@ -95,11 +124,14 @@ export default async function ArticlePage({ params }: Props) {
             </code>{" "}
             先寫下來就能省很多事。
           </li>
-          <li className="mb-2.5">改了東西卻忘了同步文件，過幾天連自己都看不懂。</li>
+          <li className="mb-2.5">
+            改了東西卻忘了同步文件，過幾天連自己都看不懂。
+          </li>
           <li className="mb-2.5">想回頭修改前面的決定，卻發現流程被鎖死了。</li>
         </ul>
         <p className="mb-[22px]">
-          後來我把流程改成「先對齊、再動手」。每次開始前，先用一段話把要做的事寫清楚，確認彼此（包含 AI）的理解一致，再開始實作。聽起來很簡單，但效果出乎意料地好。
+          後來我把流程改成「先對齊、再動手」。每次開始前，先用一段話把要做的事寫清楚，確認彼此（包含
+          AI）的理解一致，再開始實作。聽起來很簡單，但效果出乎意料地好。
         </p>
         <pre className="mb-[26px] overflow-x-auto rounded-[10px] bg-[#1f2024] px-5 py-[18px] font-mono text-sm leading-[1.7] text-[#e6e6e6]">
           <span className="text-[#7fdbca]">$</span> opsx:new{" "}
@@ -142,27 +174,37 @@ export default async function ArticlePage({ params }: Props) {
       </div>
 
       {/* Prev / Next */}
-      <div className="mb-9 grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(240px,1fr))]">
+      <div className="mb-9 grid [grid-template-columns:repeat(auto-fit,minmax(240px,1fr))] gap-4">
         <Link
           href={`/articles/${prev.slug}`}
           className="rounded-hh-m bg-white px-[22px] py-5 shadow-hh-20 transition-transform hover:-translate-y-[3px]"
         >
-          <div className="mb-2 text-[13px] text-hh-text-secondary">← 上一篇</div>
-          <div className="text-base font-semibold text-hh-text-emphasize">{prev.title}</div>
+          <div className="mb-2 text-[13px] text-hh-text-secondary">
+            ← 上一篇
+          </div>
+          <div className="text-base font-semibold text-hh-text-emphasize">
+            {prev.title}
+          </div>
         </Link>
         <Link
           href={`/articles/${next.slug}`}
           className="rounded-hh-m bg-white px-[22px] py-5 text-right shadow-hh-20 transition-transform hover:-translate-y-[3px]"
         >
-          <div className="mb-2 text-[13px] text-hh-text-secondary">下一篇 →</div>
-          <div className="text-base font-semibold text-hh-text-emphasize">{next.title}</div>
+          <div className="mb-2 text-[13px] text-hh-text-secondary">
+            下一篇 →
+          </div>
+          <div className="text-base font-semibold text-hh-text-emphasize">
+            {next.title}
+          </div>
         </Link>
       </div>
 
       {/* Comments */}
       <section className="rounded-hh-l bg-white px-[30px] py-7 shadow-hh-20">
         <h3 className="mb-1 text-xl font-semibold">留言討論</h3>
-        <div className="mb-6 text-sm text-hh-text-secondary">3 則留言 · 5 則回覆</div>
+        <div className="mb-6 text-sm text-hh-text-secondary">
+          3 則留言 · 5 則回覆
+        </div>
 
         <div className="mb-6 flex gap-3.5">
           <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-hh-surface-medium font-semibold text-hh-text-secondary">
@@ -187,7 +229,8 @@ export default async function ArticlePage({ params }: Props) {
                 </span>
               </div>
               <p className="text-sm leading-[1.7] text-hh-text-primary">
-                好問題！我通常會先挑一個還在動的模組，把它現在的行為描述成 spec，再慢慢往外擴。一次補全反而容易爛尾。
+                好問題！我通常會先挑一個還在動的模組，把它現在的行為描述成
+                spec，再慢慢往外擴。一次補全反而容易爛尾。
               </p>
             </div>
           </div>
@@ -203,7 +246,8 @@ export default async function ArticlePage({ params }: Props) {
               <span className="text-[13px] text-hh-text-disabled">1 週前</span>
             </div>
             <p className="text-[15px] leading-[1.7] text-hh-text-primary">
-              那段 terminal 的範例幫我釐清了不少，已經在自己的 side project 試了，謝謝分享 👍
+              那段 terminal 的範例幫我釐清了不少，已經在自己的 side project
+              試了，謝謝分享 👍
             </p>
           </div>
         </div>
@@ -213,9 +257,13 @@ export default async function ArticlePage({ params }: Props) {
             <div className="border-b-2 border-hh-primary px-4 py-2.5 text-sm font-semibold text-hh-text-emphasize">
               輸入
             </div>
-            <div className="px-4 py-2.5 text-sm text-hh-text-secondary">預覽</div>
+            <div className="px-4 py-2.5 text-sm text-hh-text-secondary">
+              預覽
+            </div>
           </div>
-          <div className="min-h-20 p-4 text-sm text-hh-text-disabled">登入後即可留言…</div>
+          <div className="min-h-20 p-4 text-sm text-hh-text-disabled">
+            登入後即可留言…
+          </div>
         </div>
         <div className="mt-3.5 flex justify-end">
           <button

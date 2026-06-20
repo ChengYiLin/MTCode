@@ -14,10 +14,12 @@ export const metadata: Metadata = {
     default: "高見龍 · 技術部落格",
     template: "%s | 高見龍",
   },
-  description: "記錄學習心得與技術分享 — 開發、AI、工具與一個工程師的日常筆記。",
+  description:
+    "記錄學習心得與技術分享 — 開發、AI、工具與一個工程師的日常筆記。",
   openGraph: {
     title: "高見龍 · 技術部落格",
-    description: "記錄學習心得與技術分享 — 開發、AI、工具與一個工程師的日常筆記。",
+    description:
+      "記錄學習心得與技術分享 — 開發、AI、工具與一個工程師的日常筆記。",
     type: "website",
   },
 };
@@ -31,8 +33,8 @@ export default function RootLayout({
     <html lang="zh-Hant" className={`${geistMono.variable} h-full antialiased`}>
       <body className="min-h-full">
         <SiteNav />
-        <main className="min-h-screen pb-[66px] lg:pb-0 lg:pr-[88px]">
-          <div className="mx-auto max-w-[1080px] px-4 pb-16 pt-12 sm:px-6 lg:pt-[84px]">
+        <main className="min-h-screen pb-[66px] lg:pr-[88px] lg:pb-0">
+          <div className="mx-auto max-w-[1080px] px-4 pt-12 pb-16 sm:px-6 lg:pt-[84px]">
             {children}
             <SiteFooter />
           </div>

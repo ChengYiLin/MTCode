@@ -25,7 +25,7 @@ export const WithCaption: Story = {
   },
   render: (args) => (
     <MediaPlaceholder {...args}>
-      <span className="absolute bottom-2.5 right-3 rounded-hh-s bg-black/45 px-2 py-0.5 text-xs text-white">
+      <span className="absolute right-3 bottom-2.5 rounded-hh-s bg-black/45 px-2 py-0.5 text-xs text-white">
         credit: placeholder
       </span>
     </MediaPlaceholder>

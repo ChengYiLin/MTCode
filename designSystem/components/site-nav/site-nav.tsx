@@ -75,7 +75,7 @@ export function SiteNav() {
       {/* Desktop floating right rail */}
       <nav
         aria-label="主要導覽"
-        className="fixed right-6 top-1/2 z-100 hidden -translate-y-1/2 flex-col gap-1.5 rounded-hh-l bg-white p-2.5 shadow-hh-30 lg:flex"
+        className="fixed top-1/2 right-6 z-100 hidden -translate-y-1/2 flex-col gap-1.5 rounded-hh-l bg-white p-2.5 shadow-hh-30 lg:flex"
       >
         {NAV_ITEMS.map((item) => {
           const active = isActive(item.key, pathname);
@@ -96,7 +96,7 @@ export function SiteNav() {
             >
               <NavIcon navKey={item.key} />
               {hovered === item.key && (
-                <span className="absolute right-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-hh-m bg-hh-ink-dark px-[11px] py-[5px] text-[13px] font-semibold text-white">
+                <span className="absolute top-1/2 right-[calc(100%+12px)] -translate-y-1/2 rounded-hh-m bg-hh-ink-dark px-[11px] py-[5px] text-[13px] font-semibold whitespace-nowrap text-white">
                   {item.label}
                 </span>
               )}
@@ -108,7 +108,7 @@ export function SiteNav() {
       {/* Mobile bottom bar */}
       <nav
         aria-label="主要導覽"
-        className="fixed inset-x-0 bottom-0 z-30 flex h-[66px] items-center justify-around border-t border-hh-border-subdued bg-white/95 px-1.5 shadow-[0_-4px_20px_rgba(0,0,0,0.07)] backdrop-blur-sm lg:hidden"
+        className="border-hh-border-subdued fixed inset-x-0 bottom-0 z-30 flex h-[66px] items-center justify-around border-t bg-white/95 px-1.5 shadow-[0_-4px_20px_rgba(0,0,0,0.07)] backdrop-blur-sm lg:hidden"
       >
         {NAV_ITEMS.map((item) => {
           const active = isActive(item.key, pathname);

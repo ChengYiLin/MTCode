@@ -4,10 +4,12 @@ import Link from "next/link";
 export function getMdxComponents(): MDXComponents {
   return {
     h1: ({ children }) => (
-      <h1 className="mt-8 mb-4 text-3xl font-bold tracking-tight">{children}</h1>
+      <h1 className="mt-8 mb-4 text-3xl font-bold tracking-tight">
+        {children}
+      </h1>
     ),
     h2: ({ children }) => (
-      <h2 className="mt-8 mb-3 text-2xl font-semibold tracking-tight border-b pb-2">
+      <h2 className="mt-8 mb-3 border-b pb-2 text-2xl font-semibold tracking-tight">
         {children}
       </h2>
     ),
@@ -25,7 +27,7 @@ export function getMdxComponents(): MDXComponents {
     ),
     li: ({ children }) => <li className="leading-7">{children}</li>,
     blockquote: ({ children }) => (
-      <blockquote className="my-4 border-l-4 border-border pl-4 italic text-muted-foreground">
+      <blockquote className="my-4 border-l-4 border-border pl-4 text-muted-foreground italic">
         {children}
       </blockquote>
     ),
@@ -47,7 +49,7 @@ export function getMdxComponents(): MDXComponents {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="underline underline-offset-4 hover:text-primary transition-colors"
+            className="underline underline-offset-4 transition-colors hover:text-primary"
           >
             {children}
           </a>
@@ -56,7 +58,7 @@ export function getMdxComponents(): MDXComponents {
       return (
         <Link
           href={href ?? "#"}
-          className="underline underline-offset-4 hover:text-primary transition-colors"
+          className="underline underline-offset-4 transition-colors hover:text-primary"
         >
           {children}
         </Link>

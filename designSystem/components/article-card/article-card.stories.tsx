@@ -50,7 +50,8 @@ export const LongTitle: Story = {
   args: {
     article: {
       ...base,
-      title: "Spec-as-source 是理想還是負擔？從實際導入後遇到的幾個現實問題說起",
+      title:
+        "Spec-as-source 是理想還是負擔？從實際導入後遇到的幾個現實問題說起",
     },
   },
 };

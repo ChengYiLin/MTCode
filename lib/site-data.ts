@@ -129,8 +129,7 @@ export const articles: Article[] = [
     tags: ["網路", "原理", "筆記"],
     featured: false,
     words: "1,800",
-    excerpt:
-      "一個看似理所當然的小知識，背後其實藏著作業系統與解析順序的細節。",
+    excerpt: "一個看似理所當然的小知識，背後其實藏著作業系統與解析順序的細節。",
   },
   {
     slug: "learning-or-lazy-with-ai",
@@ -218,16 +217,59 @@ export const profile = {
     "我透過寫書、寫 Blog 與拍影片來記錄學習心得，希望對大家有幫助。網站內容可能會因為時間或軟體改版而過期，若有任何問題或是哪邊寫錯了，還請不吝留言或來信指教。",
     "最近很喜歡用 AI 做些小東西。如果你也想一起聊聊技術、或分享新玩具，歡迎加入我們的社群！",
   ],
-  workTags: ["網站開發者", "講師", "技術書作者", "企業內訓", "技術顧問", "魔物獵人"],
+  workTags: [
+    "網站開發者",
+    "講師",
+    "技術書作者",
+    "企業內訓",
+    "技術顧問",
+    "魔物獵人",
+  ],
 };
 
 export const timeline: TimelineEntry[] = [
-  { year: "2025", award: "冠軍", group: "AI & Data 組", title: "「為你自己學 n8n」", win: true },
-  { year: "2024", award: "冠軍", group: "Python 組", title: "「為你自己讀 CPython 原始碼」", win: true },
-  { year: "2023", award: "冠軍", group: "Software Development 組", title: "「為你自己學 Rust」", win: true },
-  { year: "2023", award: "冠軍", group: "影片教學組", title: "「Vite 原始碼解讀」", win: true },
-  { year: "2022", award: "優選", group: "影片教學組", title: "「為你自己學 GitLab CI/CD」", win: false },
-  { year: "2021", award: "冠軍", group: "永豐金融 APIs 組", title: "「看手冊學金流串接」", win: true },
+  {
+    year: "2025",
+    award: "冠軍",
+    group: "AI & Data 組",
+    title: "「為你自己學 n8n」",
+    win: true,
+  },
+  {
+    year: "2024",
+    award: "冠軍",
+    group: "Python 組",
+    title: "「為你自己讀 CPython 原始碼」",
+    win: true,
+  },
+  {
+    year: "2023",
+    award: "冠軍",
+    group: "Software Development 組",
+    title: "「為你自己學 Rust」",
+    win: true,
+  },
+  {
+    year: "2023",
+    award: "冠軍",
+    group: "影片教學組",
+    title: "「Vite 原始碼解讀」",
+    win: true,
+  },
+  {
+    year: "2022",
+    award: "優選",
+    group: "影片教學組",
+    title: "「為你自己學 GitLab CI/CD」",
+    win: false,
+  },
+  {
+    year: "2021",
+    award: "冠軍",
+    group: "永豐金融 APIs 組",
+    title: "「看手冊學金流串接」",
+    win: true,
+  },
 ];
 
 export const partners = [
@@ -253,7 +295,11 @@ export function getArticleIndex(slug: string): number {
 }
 
 /** Articles grouped by year, newest year first — used by the list page. */
-export function getArticlesByYear(): { year: string; count: number; items: Article[] }[] {
+export function getArticlesByYear(): {
+  year: string;
+  count: number;
+  items: Article[];
+}[] {
   const groups = new Map<string, Article[]>();
   for (const a of articles) {
     const year = a.date.slice(0, 4);

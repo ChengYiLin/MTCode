@@ -14,28 +14,28 @@ export function ArticleCard({ article }: { article: Article }) {
     >
       <MediaPlaceholder className="aspect-[16/9] w-full">
         {article.featured && (
-          <span className="absolute right-2.5 top-2.5 rounded-hh-s bg-hh-gold-50 px-[9px] py-0.5 text-xs font-semibold text-white">
+          <span className="absolute top-2.5 right-2.5 rounded-hh-s bg-hh-gold-50 px-[9px] py-0.5 text-xs font-semibold text-white">
             精選
           </span>
         )}
       </MediaPlaceholder>
-      <div className="px-4 pb-[18px] pt-4">
+      <div className="px-4 pt-4 pb-[18px]">
         <div className="mb-3 flex flex-wrap gap-1.5">
           {visibleTags.map((tag) => (
             <span
               key={tag}
-              className="rounded-hh-s bg-hh-primary-tint px-2 py-0.5 text-xs font-semibold leading-5 text-hh-primary"
+              className="rounded-hh-s bg-hh-primary-tint px-2 py-0.5 text-xs leading-5 font-semibold text-hh-primary"
             >
               {tag}
             </span>
           ))}
           {moreCount > 0 && (
-            <span className="rounded-hh-s bg-hh-surface-neutral px-2 py-0.5 text-xs font-semibold leading-5 text-hh-text-secondary">
+            <span className="rounded-hh-s bg-hh-surface-neutral px-2 py-0.5 text-xs leading-5 font-semibold text-hh-text-secondary">
               +{moreCount}
             </span>
           )}
         </div>
-        <h3 className="mb-2.5 line-clamp-2 text-[18px] font-semibold leading-[1.4] text-hh-text-emphasize">
+        <h3 className="mb-2.5 line-clamp-2 text-[18px] leading-[1.4] font-semibold text-hh-text-emphasize">
           {article.title}
         </h3>
         <p className="mb-4 line-clamp-3 text-sm leading-[1.6] text-hh-text-secondary">
