@@ -1,0 +1,86 @@
+/* =============================================================
+   Hahow Design System — CSS Custom Properties (light mode)
+   Source of truth: designSystem/data/tokens.json
+   Semantic layer only — resolved directly to hex / rgba values.
+   Reference palette (ref.*) stays in the JSON; do not add it here.
+   ============================================================= */
+
+:root {
+  /* ── Interactive / Brand ── */
+  --hh-primary:              #00ccb4;  /* primary.70 */
+  --hh-primary-hover:        #05ada2;  /* primary.60 */
+  --hh-primary-active:       #078886;  /* primary.50 */
+  --hh-primary-disabled:     #c4c7c5;  /* grey.80 */
+  --hh-primary-tint:         #eefcf8;  /* primary.99 */
+  --hh-primary-tint-strong:  #dcf9f3;  /* primary.95 */
+  --hh-primary-dark:         #004c52;  /* primary.20 */
+  --hh-on-primary:           #ffffff;
+
+  /* ── Promotion / Sale (orange — never used for nav / brand CTAs) ── */
+  --hh-promotion:            #fa8c16;  /* orange.50 */
+  --hh-promotion-hover:      #d46b08;  /* orange.40 */
+  --hh-promotion-active:     #ad4e00;  /* orange.30 */
+
+  /* ── State ── */
+  --hh-critical:             #e0443d;  /* red.50 */
+  --hh-critical-hover:       #ba1a1a;  /* red.40 */
+  --hh-critical-active:      #93000a;  /* red.30 */
+  --hh-warning:              #faad14;  /* gold.50 */
+  --hh-success:              #2abf6b;  /* green.50 */
+
+  /* ── Product ── */
+  --hh-like:                 #f65f55;  /* red.60 */
+  --hh-live:                 #f65f55;  /* red.60 */
+  --hh-rating:               #faad14;  /* gold.50 */
+
+  /* ── Gold (award badges — see DESIGN.md: amber for ratings only) ── */
+  --hh-gold-30:              #ad6800;
+  --hh-gold-50:              #faad14;
+  --hh-gold-90:              #fff0b3;
+
+  /* ── Text ── */
+  --hh-text-emphasize:       #262626;  /* grey.15 — titles */
+  --hh-text-primary:         #595959;  /* grey.35 — body */
+  --hh-text-secondary:       #8c8c8c;  /* grey.55 — muted */
+  --hh-text-disabled:        #bfbfbf;  /* grey.75 — placeholder */
+  --hh-on-color:             #ffffff;
+
+  /* ── Surface / Background ── */
+  --hh-canvas:               #ffffff;
+  --hh-ink-dark:             #1f2024;  /* near-black — logo badge, nav tooltip, dark avatar */
+  --hh-surface-soft:         #f5f7f9;  /* cold-grey.99 — page canvas */
+  --hh-surface-medium:       #eff2f6;  /* cold-grey.95 */
+  --hh-surface-neutral:      #f2f2f2;  /* grey.95 — tag / chip fill */
+  --hh-surface-deco:         #eefcf8;  /* primary.99 — teal-tinted band */
+  --hh-surface-deco-secondary: #fffcf0; /* secondary.99 — amber-tinted band */
+  --hh-surface-dark:         #004c52;  /* primary.20 — dark teal hero */
+
+  /* ── Border ── */
+  --hh-border:               rgba(0, 0, 0, 0.15);  /* opacity-black.15 */
+  --hh-border-subdued:       rgba(0, 0, 0, 0.06);  /* opacity-black.6  */
+  --hh-border-highlight:     rgba(0, 0, 0, 0.25);  /* opacity-black.25 */
+  --hh-border-medium:        rgba(0, 0, 0, 0.09);  /* opacity-black.9  */
+
+  /* ── Overlay ── */
+  --hh-overlay:              rgba(0, 0, 0, 0.65);
+  --hh-overlay-light:        rgba(0, 0, 0, 0.25);
+
+  /* ── Gradient (angle fixed — do not interpolate new angles) ── */
+  --hh-gradient-down-left:   linear-gradient(58.07deg, #00abb6 0%, #00ccb4 52.49%, #23d9bd 100%);
+  --hh-gradient-top-left:    linear-gradient(148.66deg, #00abb6 0%, #00ccb4 52.08%, #23d9bd 99.23%);
+  --hh-gradient-top-right:   linear-gradient(238.07deg, #00abb6 0%, #00ccb4 52.49%, #23d9bd 100%);
+  --hh-gradient-down-right:  linear-gradient(328.07deg, #00abb6 0%, #00ccb4 52.49%, #23d9bd 100%);
+
+  /* ── Elevation (shadow levels 10 – 50) ── */
+  --hh-shadow-10: 0 2px 1px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.25);
+  --hh-shadow-20: 0 0 2px rgba(0, 0, 0, 0.04), 0 4px 10px rgba(0, 0, 0, 0.08);
+  --hh-shadow-30: 0 0 8px rgba(0, 0, 0, 0.04), 0 6px 20px rgba(0, 0, 0, 0.12);
+  --hh-shadow-40: 0 0 8px rgba(0, 0, 0, 0.08), 0 6px 24px rgba(0, 0, 0, 0.16);
+  --hh-shadow-50: 0 16px 32px rgba(0, 0, 0, 0.16), 0 0 8px rgba(0, 0, 0, 0.08);
+
+  /* ── Border radius ── */
+  --hh-radius-xs: 2px;   /* small tags, chips         */
+  --hh-radius-s:  4px;   /* buttons, inputs, badges   */
+  --hh-radius-m:  8px;   /* cards, modals             */
+  --hh-radius-l:  16px;  /* panels, section backgrounds */
+}
