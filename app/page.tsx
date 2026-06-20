@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { ArticleCard } from "@/components/article-card";
-import { MediaPlaceholder } from "@/components/media-placeholder";
+import { ArticleCard } from "@/designSystem/components/article-card";
+import { MediaPlaceholder } from "@/designSystem/components/media-placeholder";
 import { articles, partners } from "@/lib/site-data";
 
 export default function HomePage() {

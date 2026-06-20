@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { MediaPlaceholder } from "@/components/media-placeholder";
+import { MediaPlaceholder } from "@/designSystem/components/media-placeholder";
 import { articles, getArticleBySlug, getArticleIndex } from "@/lib/site-data";
 
 interface Props {

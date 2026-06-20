@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Article } from "@/lib/site-data";
-import { MediaPlaceholder } from "@/components/media-placeholder";
+import { MediaPlaceholder } from "@/designSystem/components/media-placeholder";
 
 /** Cover card used in the home "最新文章" grid. */
 export function ArticleCard({ article }: { article: Article }) {
