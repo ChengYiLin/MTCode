@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Geist_Mono } from "next/font/google";
+import { Geist_Mono, Noto_Sans } from "next/font/google";
 import { SiteNav } from "@/designSystem/components/site-nav";
 import { SiteFooter } from "@/designSystem/components/site-footer";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+
+const notoSans = Noto_Sans({ subsets: ["latin"], variable: "--font-sans" });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -30,7 +33,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-Hant" className={`${geistMono.variable} h-full antialiased`}>
+    <html
+      lang="zh-Hant"
+      className={cn(
+        "h-full",
+        "antialiased",
+        geistMono.variable,
+        "font-sans",
+        notoSans.variable,
+      )}
+    >
       <body className="min-h-full">
         <SiteNav />
         <main className="min-h-screen pb-[66px] lg:pr-[88px] lg:pb-0">

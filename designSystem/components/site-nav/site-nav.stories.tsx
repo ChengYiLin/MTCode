@@ -17,7 +17,7 @@ export const HomeActive: Story = {
   },
   decorators: [
     (Story) => (
-      <div className="relative h-screen bg-hh-surface-soft">
+      <div className="relative h-screen bg-muted">
         <Story />
       </div>
     ),
@@ -31,7 +31,7 @@ export const ArticlesActive: Story = {
   },
   decorators: [
     (Story) => (
-      <div className="relative h-screen bg-hh-surface-soft">
+      <div className="relative h-screen bg-muted">
         <Story />
       </div>
     ),
@@ -45,7 +45,7 @@ export const SlidesActive: Story = {
   },
   decorators: [
     (Story) => (
-      <div className="relative h-screen bg-hh-surface-soft">
+      <div className="relative h-screen bg-muted">
         <Story />
       </div>
     ),
@@ -59,7 +59,7 @@ export const AboutActive: Story = {
   },
   decorators: [
     (Story) => (
-      <div className="relative h-screen bg-hh-surface-soft">
+      <div className="relative h-screen bg-muted">
         <Story />
       </div>
     ),
@@ -73,7 +73,7 @@ export const MobileHomeActive: Story = {
   },
   decorators: [
     (Story) => (
-      <div className="relative h-screen bg-hh-surface-soft">
+      <div className="relative h-screen bg-muted">
         <Story />
       </div>
     ),
@@ -87,7 +87,7 @@ export const MobileArticlesActive: Story = {
   },
   decorators: [
     (Story) => (
-      <div className="relative h-screen bg-hh-surface-soft">
+      <div className="relative h-screen bg-muted">
         <Story />
       </div>
     ),

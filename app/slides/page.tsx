@@ -11,8 +11,8 @@ export default function SlidesPage() {
   return (
     <div>
       {/* Header card */}
-      <div className="mb-7 rounded-hh-l bg-white px-8 py-[30px] shadow-hh-20">
-        <div className="mb-4 flex items-center gap-2 text-sm text-hh-text-secondary">
+      <div className="mb-7 rounded-3xl bg-white px-8 py-[30px] shadow-sm">
+        <div className="mb-4 flex items-center gap-2 text-sm text-muted-foreground">
           <Link href="/" className="inline-flex items-center gap-[5px]">
             <svg
               width="15"
@@ -26,17 +26,17 @@ export default function SlidesPage() {
             </svg>
             首頁
           </Link>
-          <span className="text-hh-text-disabled">›</span>
-          <span className="text-hh-text-primary">投影片</span>
+          <span className="text-muted-foreground/60">›</span>
+          <span className="text-foreground">投影片</span>
         </div>
         <div className="flex flex-wrap items-end justify-between gap-3.5">
           <div>
             <h1 className="mb-1.5 text-[32px] font-semibold">投影片</h1>
-            <p className="text-[15px] text-hh-text-secondary">
+            <p className="text-[15px] text-muted-foreground">
               分享我的演講簡報與教學投影片
             </p>
           </div>
-          <span className="text-sm text-hh-text-secondary">
+          <span className="text-sm text-muted-foreground">
             共 {slides.length} 份簡報
           </span>
         </div>
@@ -47,7 +47,7 @@ export default function SlidesPage() {
         {slides.map((slide) => (
           <div
             key={slide.title}
-            className="cursor-pointer overflow-hidden rounded-hh-m bg-white shadow-hh-20 transition-all duration-300 hover:-translate-y-1 hover:shadow-hh-30"
+            className="cursor-pointer overflow-hidden rounded-lg bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
           >
             <div className="relative flex aspect-[16/9] w-full items-center justify-center bg-[linear-gradient(135deg,#d3d8de,#e6e9ed)]">
               <svg
@@ -61,7 +61,7 @@ export default function SlidesPage() {
                 <rect x="3" y="4" width="18" height="12" rx="1.5" />
                 <path d="M12 16v4M8 20h8" />
               </svg>
-              <span className="absolute right-2.5 bottom-2.5 rounded-hh-s bg-[rgba(31,32,36,.82)] px-[9px] py-0.5 text-xs font-semibold text-white">
+              <span className="absolute right-2.5 bottom-2.5 rounded-sm bg-[rgba(31,32,36,.82)] px-[9px] py-0.5 text-xs font-semibold text-white">
                 {slide.pages} 頁
               </span>
             </div>
@@ -69,20 +69,20 @@ export default function SlidesPage() {
               <h3 className="mb-2.5 line-clamp-2 text-[18px] leading-[1.4] font-semibold">
                 {slide.title}
               </h3>
-              <p className="mb-3.5 line-clamp-2 text-sm leading-[1.6] text-hh-text-secondary">
+              <p className="mb-3.5 line-clamp-2 text-sm leading-[1.6] text-muted-foreground">
                 {slide.desc}
               </p>
               <div className="mb-4 flex flex-wrap gap-1.5">
                 {slide.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-hh-s bg-hh-primary-tint px-2 py-0.5 text-xs font-semibold text-hh-primary"
+                    className="rounded-sm bg-primary/10 px-2 py-0.5 text-xs font-semibold text-primary"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
-              <div className="flex items-center justify-between border-t border-black/[.06] pt-3 text-[13px] text-hh-text-secondary">
+              <div className="flex items-center justify-between border-t border-black/[.06] pt-3 text-[13px] text-muted-foreground">
                 <span className="inline-flex min-w-0 items-center gap-[5px]">
                   <svg
                     className="flex-none"

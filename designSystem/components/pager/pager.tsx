@@ -29,7 +29,7 @@ function pageWindow(current: number, total: number): (number | "…")[] {
 }
 
 const arrowBtn =
-  "flex h-10 w-10 flex-none items-center justify-center rounded-hh-s border border-black/[.12] bg-white transition-colors";
+  "flex h-10 w-10 flex-none items-center justify-center rounded-sm border border-black/[.12] bg-white transition-colors";
 
 export function Pager({
   currentPage,
@@ -46,7 +46,7 @@ export function Pager({
       {isFirst ? (
         <span
           aria-disabled="true"
-          className={`${arrowBtn} text-hh-text-disabled`}
+          className={`${arrowBtn} text-muted-foreground/60`}
         >
           <ChevronLeft />
         </span>
@@ -54,7 +54,7 @@ export function Pager({
         <Link
           href={hrefForPage(currentPage - 1, basePath)}
           aria-label="上一頁"
-          className={`${arrowBtn} text-hh-text-primary hover:bg-hh-primary-tint`}
+          className={`${arrowBtn} text-foreground hover:bg-primary/10`}
         >
           <ChevronLeft />
         </Link>
@@ -64,7 +64,7 @@ export function Pager({
         item === "…" ? (
           <span
             key={`gap-${i}`}
-            className="flex-none px-0.5 text-hh-text-disabled"
+            className="flex-none px-0.5 text-muted-foreground/60"
           >
             …
           </span>
@@ -72,7 +72,7 @@ export function Pager({
           <span
             key={item}
             aria-current="page"
-            className="flex h-10 min-w-10 flex-none items-center justify-center rounded-hh-s bg-hh-primary text-sm font-semibold text-white"
+            className="flex h-10 min-w-10 flex-none items-center justify-center rounded-sm bg-primary text-sm font-semibold text-white"
           >
             {item}
           </span>
@@ -80,7 +80,7 @@ export function Pager({
           <Link
             key={item}
             href={hrefForPage(item, basePath)}
-            className="flex h-10 min-w-10 flex-none items-center justify-center rounded-hh-s border border-black/[.12] bg-white text-sm text-hh-text-primary transition-colors hover:bg-hh-primary-tint"
+            className="flex h-10 min-w-10 flex-none items-center justify-center rounded-sm border border-black/[.12] bg-white text-sm text-foreground transition-colors hover:bg-primary/10"
           >
             {item}
           </Link>
@@ -90,7 +90,7 @@ export function Pager({
       {isLast ? (
         <span
           aria-disabled="true"
-          className={`${arrowBtn} text-hh-text-disabled`}
+          className={`${arrowBtn} text-muted-foreground/60`}
         >
           <ChevronRight />
         </span>
@@ -98,7 +98,7 @@ export function Pager({
         <Link
           href={hrefForPage(currentPage + 1, basePath)}
           aria-label="下一頁"
-          className={`${arrowBtn} text-hh-text-primary hover:bg-hh-primary-tint`}
+          className={`${arrowBtn} text-foreground hover:bg-primary/10`}
         >
           <ChevronRight />
         </Link>

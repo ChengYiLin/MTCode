@@ -11,9 +11,9 @@ export default function AboutPage() {
   return (
     <div>
       {/* Profile + bio */}
-      <div className="mb-6 flex flex-wrap gap-10 rounded-hh-l bg-white p-9 shadow-hh-20">
+      <div className="mb-6 flex flex-wrap gap-10 rounded-3xl bg-white p-9 shadow-sm">
         <div className="w-[260px] max-w-full flex-none">
-          <div className="mb-[18px] flex aspect-square w-full items-center justify-center rounded-hh-m bg-[linear-gradient(135deg,#d3d8de,#e6e9ed)]">
+          <div className="mb-[18px] flex aspect-square w-full items-center justify-center rounded-lg bg-[linear-gradient(135deg,#d3d8de,#e6e9ed)]">
             <svg
               width="56"
               height="56"
@@ -27,10 +27,10 @@ export default function AboutPage() {
             </svg>
           </div>
           <h2 className="mb-1.5 text-[26px] font-semibold">{profile.name}</h2>
-          <p className="mb-[18px] text-sm leading-[1.5] text-hh-text-secondary">
+          <p className="mb-[18px] text-sm leading-[1.5] text-muted-foreground">
             {profile.tagline}
           </p>
-          <div className="flex flex-col gap-2.5 border-b border-black/[.08] pb-[18px] text-sm text-hh-text-primary">
+          <div className="flex flex-col gap-2.5 border-b border-black/[.08] pb-[18px] text-sm text-foreground">
             <span className="inline-flex items-center gap-[9px]">
               <svg
                 width="15"
@@ -78,7 +78,7 @@ export default function AboutPage() {
             {profile.socials.map((s) => (
               <div
                 key={s}
-                className="flex h-[38px] w-[38px] cursor-pointer items-center justify-center rounded-full bg-hh-surface-neutral text-[13px] font-semibold text-hh-text-secondary transition-all hover:bg-hh-primary-tint hover:text-hh-primary"
+                className="flex h-[38px] w-[38px] cursor-pointer items-center justify-center rounded-full bg-muted text-[13px] font-semibold text-muted-foreground transition-all hover:bg-primary/10 hover:text-primary"
               >
                 {s}
               </div>
@@ -87,7 +87,7 @@ export default function AboutPage() {
         </div>
 
         <div className="min-w-[280px] flex-1">
-          <div className="mb-3.5 flex items-center gap-2 text-sm text-hh-text-secondary">
+          <div className="mb-3.5 flex items-center gap-2 text-sm text-muted-foreground">
             <Link href="/" className="inline-flex items-center gap-[5px]">
               <svg
                 width="15"
@@ -101,14 +101,14 @@ export default function AboutPage() {
               </svg>
               首頁
             </Link>
-            <span className="text-hh-text-disabled">›</span>
-            <span className="text-hh-text-primary">關於</span>
+            <span className="text-muted-foreground/60">›</span>
+            <span className="text-foreground">關於</span>
           </div>
           <h1 className="mb-5 text-[30px] font-semibold">「哈囉，世界！」</h1>
           {profile.bio.map((para, i) => (
             <p
               key={i}
-              className="mb-[18px] text-base leading-[1.9] text-hh-text-primary"
+              className="mb-[18px] text-base leading-[1.9] text-foreground"
             >
               {para}
             </p>
@@ -117,15 +117,15 @@ export default function AboutPage() {
       </div>
 
       {/* Work tags */}
-      <div className="mb-6 rounded-hh-l bg-white px-8 py-7 shadow-hh-20">
-        <h3 className="mb-[18px] text-base font-semibold text-hh-text-primary">
+      <div className="mb-6 rounded-3xl bg-white px-8 py-7 shadow-sm">
+        <h3 className="mb-[18px] text-base font-semibold text-foreground">
           工作
         </h3>
         <div className="flex flex-wrap gap-3">
           {profile.workTags.map((w) => (
             <span
               key={w}
-              className="rounded-hh-m bg-hh-surface-soft px-[18px] py-[9px] text-[15px] text-hh-text-primary"
+              className="rounded-lg bg-muted px-[18px] py-[9px] text-[15px] text-foreground"
             >
               {w}
             </span>
@@ -134,8 +134,8 @@ export default function AboutPage() {
       </div>
 
       {/* ITHOME timeline */}
-      <div className="rounded-hh-l bg-white px-8 py-7 shadow-hh-20">
-        <h3 className="mb-[22px] text-base font-semibold tracking-[.04em] text-hh-text-primary">
+      <div className="rounded-3xl bg-white px-8 py-7 shadow-sm">
+        <h3 className="mb-[22px] text-base font-semibold tracking-[.04em] text-foreground">
           ITHOME 鐵人賽
         </h3>
         <div className="relative pl-2">
@@ -146,14 +146,14 @@ export default function AboutPage() {
                 key={`${entry.year}-${entry.title}`}
                 className="relative flex gap-[18px] pb-[26px]"
               >
-                <div className="w-12 flex-none pt-px text-right text-[15px] font-semibold text-hh-text-primary">
+                <div className="w-12 flex-none pt-px text-right text-[15px] font-semibold text-foreground">
                   {entry.year}
                 </div>
                 <div className="relative flex flex-none flex-col items-center">
                   <span
                     className={[
                       "z-[1] mt-[5px] h-3 w-3 rounded-full",
-                      entry.win ? "bg-hh-gold-50" : "bg-hh-primary-disabled",
+                      entry.win ? "bg-amber-400" : "bg-muted",
                     ].join(" ")}
                   />
                   {!isLast && (
@@ -164,19 +164,19 @@ export default function AboutPage() {
                   <div className="mb-1 flex items-center gap-2.5">
                     <span
                       className={[
-                        "rounded-hh-s px-[9px] py-px text-xs font-semibold",
+                        "rounded-sm px-[9px] py-px text-xs font-semibold",
                         entry.win
-                          ? "bg-hh-gold-90 text-hh-gold-30"
-                          : "bg-hh-surface-neutral text-hh-text-secondary",
+                          ? "bg-amber-100 text-amber-700"
+                          : "bg-muted text-muted-foreground",
                       ].join(" ")}
                     >
                       {entry.award}
                     </span>
-                    <span className="text-[13px] text-hh-text-secondary">
+                    <span className="text-[13px] text-muted-foreground">
                       {entry.group}
                     </span>
                   </div>
-                  <div className="text-base font-semibold text-hh-text-emphasize">
+                  <div className="text-base font-semibold text-foreground">
                     {entry.title}
                   </div>
                 </div>

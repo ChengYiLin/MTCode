@@ -9,11 +9,11 @@ export default function HomePage() {
 
   if (all.length === 0) {
     return (
-      <div className="rounded-hh-l bg-white px-8 py-16 text-center shadow-hh-20">
-        <h2 className="mb-2 text-xl font-semibold text-hh-text-emphasize">
+      <div className="rounded-3xl bg-white px-8 py-16 text-center shadow-sm">
+        <h2 className="mb-2 text-xl font-semibold text-foreground">
           還沒有文章
         </h2>
-        <p className="text-sm text-hh-text-secondary">
+        <p className="text-sm text-muted-foreground">
           在 content/posts/ 新增 .mdx 檔案後，文章就會出現在這裡。
         </p>
       </div>
@@ -29,7 +29,7 @@ export default function HomePage() {
       {/* Hero — featured post */}
       <Link
         href={`/articles/${hero.slug}`}
-        className="relative block cursor-pointer overflow-hidden rounded-hh-l shadow-hh-30"
+        className="relative block cursor-pointer overflow-hidden rounded-3xl shadow-md"
       >
         <MediaPlaceholder
           iconSize={60}
@@ -39,16 +39,16 @@ export default function HomePage() {
         </MediaPlaceholder>
         <div className="absolute inset-x-0 bottom-0 px-7 pt-7 pb-[26px] text-white">
           <div className="mb-3.5 flex gap-2">
-            <span className="rounded-hh-s bg-hh-primary px-[11px] py-[3px] text-[13px] font-semibold text-white">
+            <span className="rounded-sm bg-primary px-[11px] py-[3px] text-[13px] font-semibold text-white">
               {hero.tags[0]}
             </span>
             {hero.tags[1] && (
-              <span className="rounded-hh-s bg-white/[.18] px-[11px] py-[3px] text-[13px] font-semibold text-white backdrop-blur-sm">
+              <span className="rounded-sm bg-white/[.18] px-[11px] py-[3px] text-[13px] font-semibold text-white backdrop-blur-sm">
                 {hero.tags[1]}
               </span>
             )}
             {heroMore > 0 && (
-              <span className="rounded-hh-s bg-white/[.18] px-[9px] py-[3px] text-[13px] font-semibold text-white">
+              <span className="rounded-sm bg-white/[.18] px-[9px] py-[3px] text-[13px] font-semibold text-white">
                 +{heroMore}
               </span>
             )}
@@ -57,7 +57,7 @@ export default function HomePage() {
             {hero.title}
           </div>
           <div className="flex items-center gap-3.5">
-            <span className="h-[3px] w-[30px] rounded-sm bg-hh-primary" />
+            <span className="h-[3px] w-[30px] rounded-sm bg-primary" />
             <span className="text-sm text-white/85">
               {formatDate(hero.date)}
             </span>
@@ -68,7 +68,7 @@ export default function HomePage() {
       {/* Latest articles */}
       <section>
         <div className="my-[22px] mt-10 flex items-center gap-[18px]">
-          <h2 className="text-[22px] font-semibold whitespace-nowrap text-hh-text-emphasize">
+          <h2 className="text-[22px] font-semibold whitespace-nowrap text-foreground">
             最新文章
           </h2>
           <span className="h-px flex-1 bg-black/[.08]" />

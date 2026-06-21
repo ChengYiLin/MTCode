@@ -15,17 +15,17 @@ export const CardThumbnail: Story = {
 };
 
 export const HeroLarge: Story = {
-  args: { iconSize: 60, className: "h-[360px] w-[760px] rounded-hh-l" },
+  args: { iconSize: 60, className: "h-[360px] w-[760px] rounded-3xl" },
 };
 
 export const WithCaption: Story = {
   args: {
     iconSize: 56,
-    className: "h-[240px] w-[480px] overflow-hidden rounded-hh-m",
+    className: "h-[240px] w-[480px] overflow-hidden rounded-lg",
   },
   render: (args) => (
     <MediaPlaceholder {...args}>
-      <span className="absolute right-3 bottom-2.5 rounded-hh-s bg-black/45 px-2 py-0.5 text-xs text-white">
+      <span className="absolute right-3 bottom-2.5 rounded-sm bg-black/45 px-2 py-0.5 text-xs text-white">
         credit: placeholder
       </span>
     </MediaPlaceholder>

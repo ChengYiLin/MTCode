@@ -27,7 +27,7 @@ function isActive(key: NavKey, pathname: string) {
 function NavIcon({ navKey }: { navKey: NavKey }) {
   if (navKey === "home") {
     return (
-      <span className="flex h-[34px] w-[34px] items-center justify-center rounded-hh-m bg-hh-ink-dark text-base font-semibold text-white">
+      <span className="flex h-[34px] w-[34px] items-center justify-center rounded-lg bg-foreground text-base font-semibold text-white">
         龍
       </span>
     );
@@ -75,7 +75,7 @@ export function SiteNav() {
       {/* Desktop floating right rail */}
       <nav
         aria-label="主要導覽"
-        className="fixed top-1/2 right-6 z-100 hidden -translate-y-1/2 flex-col gap-1.5 rounded-hh-l bg-white p-2.5 shadow-hh-30 lg:flex"
+        className="fixed top-1/2 right-6 z-100 hidden -translate-y-1/2 flex-col gap-1.5 rounded-3xl bg-white p-2.5 shadow-md lg:flex"
       >
         {NAV_ITEMS.map((item) => {
           const active = isActive(item.key, pathname);
@@ -88,15 +88,15 @@ export function SiteNav() {
               onMouseEnter={() => setHovered(item.key)}
               onMouseLeave={() => setHovered(null)}
               className={[
-                "relative flex h-[46px] w-[46px] items-center justify-center rounded-hh-m transition-all",
+                "relative flex h-[46px] w-[46px] items-center justify-center rounded-lg transition-all",
                 active
-                  ? "bg-hh-primary-tint text-hh-primary"
-                  : "bg-transparent text-hh-text-secondary",
+                  ? "bg-primary/10 text-primary"
+                  : "bg-transparent text-muted-foreground",
               ].join(" ")}
             >
               <NavIcon navKey={item.key} />
               {hovered === item.key && (
-                <span className="absolute top-1/2 right-[calc(100%+12px)] -translate-y-1/2 rounded-hh-m bg-hh-ink-dark px-[11px] py-[5px] text-[13px] font-semibold whitespace-nowrap text-white">
+                <span className="absolute top-1/2 right-[calc(100%+12px)] -translate-y-1/2 rounded-lg bg-foreground px-[11px] py-[5px] text-[13px] font-semibold whitespace-nowrap text-white">
                   {item.label}
                 </span>
               )}
@@ -108,7 +108,7 @@ export function SiteNav() {
       {/* Mobile bottom bar */}
       <nav
         aria-label="主要導覽"
-        className="border-hh-border-subdued fixed inset-x-0 bottom-0 z-30 flex h-[66px] items-center justify-around border-t bg-white/95 px-1.5 shadow-[0_-4px_20px_rgba(0,0,0,0.07)] backdrop-blur-sm lg:hidden"
+        className="fixed inset-x-0 bottom-0 z-30 flex h-[66px] items-center justify-around border-t border-border bg-white/95 px-1.5 shadow-[0_-4px_20px_rgba(0,0,0,0.07)] backdrop-blur-sm lg:hidden"
       >
         {NAV_ITEMS.map((item) => {
           const active = isActive(item.key, pathname);
@@ -118,8 +118,8 @@ export function SiteNav() {
               href={item.href}
               aria-current={active ? "page" : undefined}
               className={[
-                "flex min-w-[56px] flex-col items-center gap-[3px] rounded-hh-m px-2.5 py-1.5 transition-all",
-                active ? "text-hh-primary" : "text-hh-text-secondary",
+                "flex min-w-[56px] flex-col items-center gap-[3px] rounded-lg px-2.5 py-1.5 transition-all",
+                active ? "text-primary" : "text-muted-foreground",
               ].join(" ")}
             >
               <NavIcon navKey={item.key} />

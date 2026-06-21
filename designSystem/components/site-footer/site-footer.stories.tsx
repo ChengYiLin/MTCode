@@ -7,7 +7,7 @@ const meta: Meta<typeof SiteFooter> = {
   parameters: { layout: "fullscreen" },
   decorators: [
     (Story) => (
-      <div className="min-h-screen bg-hh-surface-soft p-6">
+      <div className="min-h-screen bg-muted p-6">
         <Story />
       </div>
     ),

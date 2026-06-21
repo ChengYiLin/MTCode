@@ -41,15 +41,15 @@ export default async function ArticlePage({ params }: Props) {
       {/* Cover */}
       <MediaPlaceholder
         iconSize={56}
-        className="h-[210px] w-full overflow-hidden rounded-hh-m sm:h-[360px]"
+        className="h-[210px] w-full overflow-hidden rounded-lg sm:h-[360px]"
       >
-        <span className="absolute right-3 bottom-2.5 rounded-hh-s bg-black/45 px-2 py-0.5 text-xs text-white">
+        <span className="absolute right-3 bottom-2.5 rounded-sm bg-black/45 px-2 py-0.5 text-xs text-white">
           credit: placeholder
         </span>
       </MediaPlaceholder>
 
       {/* Breadcrumb */}
-      <div className="my-[18px] mt-6 flex items-center gap-2 text-sm text-hh-text-secondary">
+      <div className="my-[18px] mt-6 flex items-center gap-2 text-sm text-muted-foreground">
         <Link href="/" className="inline-flex items-center gap-[5px]">
           <svg
             width="15"
@@ -63,10 +63,10 @@ export default async function ArticlePage({ params }: Props) {
           </svg>
           首頁
         </Link>
-        <span className="text-hh-text-disabled">›</span>
+        <span className="text-muted-foreground/60">›</span>
         <Link href="/articles">文章列表</Link>
-        <span className="text-hh-text-disabled">›</span>
-        <span className="overflow-hidden text-ellipsis whitespace-nowrap text-hh-text-primary">
+        <span className="text-muted-foreground/60">›</span>
+        <span className="overflow-hidden text-ellipsis whitespace-nowrap text-foreground">
           {post.title}
         </span>
       </div>
@@ -75,7 +75,7 @@ export default async function ArticlePage({ params }: Props) {
       <h1 className="mb-4 text-[34px] leading-[1.3] font-semibold">
         {post.title}
       </h1>
-      <div className="mb-7 flex items-center gap-[18px] border-b border-black/[.08] pb-6 text-sm text-hh-text-secondary">
+      <div className="mb-7 flex items-center gap-[18px] border-b border-black/[.08] pb-6 text-sm text-muted-foreground">
         <span className="inline-flex items-center gap-1.5">
           <svg
             width="15"
@@ -107,7 +107,7 @@ export default async function ArticlePage({ params }: Props) {
       </div>
 
       {/* Body — rendered from the MDX source */}
-      <div className="text-[17px] leading-[1.9] text-hh-text-primary">
+      <div className="text-[17px] leading-[1.9] text-foreground">
         <MDXRemote
           source={post.content}
           options={{ blockJS: false }}
@@ -120,7 +120,7 @@ export default async function ArticlePage({ params }: Props) {
         {post.tags.map((tag) => (
           <span
             key={tag}
-            className="rounded-hh-l bg-hh-surface-neutral px-3 py-[5px] text-sm text-hh-text-primary"
+            className="rounded-3xl bg-muted px-3 py-[5px] text-sm text-foreground"
           >
             #{tag}
           </span>
@@ -132,12 +132,12 @@ export default async function ArticlePage({ params }: Props) {
         {prev && (
           <Link
             href={`/articles/${prev.slug}`}
-            className="rounded-hh-m bg-white px-[22px] py-5 shadow-hh-20 transition-transform hover:-translate-y-[3px]"
+            className="rounded-lg bg-white px-[22px] py-5 shadow-sm transition-transform hover:-translate-y-[3px]"
           >
-            <div className="mb-2 text-[13px] text-hh-text-secondary">
+            <div className="mb-2 text-[13px] text-muted-foreground">
               ← 上一篇
             </div>
-            <div className="text-base font-semibold text-hh-text-emphasize">
+            <div className="text-base font-semibold text-foreground">
               {prev.title}
             </div>
           </Link>
@@ -145,12 +145,12 @@ export default async function ArticlePage({ params }: Props) {
         {next && (
           <Link
             href={`/articles/${next.slug}`}
-            className="rounded-hh-m bg-white px-[22px] py-5 text-right shadow-hh-20 transition-transform hover:-translate-y-[3px]"
+            className="rounded-lg bg-white px-[22px] py-5 text-right shadow-sm transition-transform hover:-translate-y-[3px]"
           >
-            <div className="mb-2 text-[13px] text-hh-text-secondary">
+            <div className="mb-2 text-[13px] text-muted-foreground">
               下一篇 →
             </div>
-            <div className="text-base font-semibold text-hh-text-emphasize">
+            <div className="text-base font-semibold text-foreground">
               {next.title}
             </div>
           </Link>
