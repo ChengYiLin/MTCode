@@ -1,18 +1,20 @@
 import Link from "next/link";
-import type { Article } from "@/lib/site-data";
+import { type PostMeta, formatDate } from "@/lib/posts";
 import { MediaPlaceholder } from "@/designSystem/components/media-placeholder";
 
+const MAX_TAGS = 3;
+
 /** Cover card used in the home "最新文章" grid. */
-export function ArticleCard({ article }: { article: Article }) {
-  const visibleTags = article.tags.slice(0, 2);
-  const moreCount = article.tags.length - visibleTags.length;
+export function ArticleCard({ article }: { article: PostMeta }) {
+  const visibleTags = article.tags.slice(0, MAX_TAGS);
+  const moreCount = article.tags.length - MAX_TAGS;
 
   return (
     <Link
       href={`/articles/${article.slug}`}
       className="group block overflow-hidden rounded-hh-m bg-white shadow-hh-20 transition-all duration-300 hover:-translate-y-1 hover:shadow-hh-30"
     >
-      <MediaPlaceholder className="aspect-[16/9] w-full">
+      <MediaPlaceholder className="aspect-video w-full">
         {article.featured && (
           <span className="absolute top-2.5 right-2.5 rounded-hh-s bg-hh-gold-50 px-[9px] py-0.5 text-xs font-semibold text-white">
             精選
@@ -39,9 +41,11 @@ export function ArticleCard({ article }: { article: Article }) {
           {article.title}
         </h3>
         <p className="mb-4 line-clamp-3 text-sm leading-[1.6] text-hh-text-secondary">
-          {article.excerpt}
+          {article.description}
         </p>
-        <div className="text-[13px] text-hh-text-disabled">{article.date}</div>
+        <div className="text-[13px] text-hh-text-disabled">
+          {formatDate(article.date)}
+        </div>
       </div>
     </Link>
   );

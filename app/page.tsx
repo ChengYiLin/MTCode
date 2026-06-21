@@ -1,11 +1,27 @@
 import Link from "next/link";
 import { ArticleCard } from "@/designSystem/components/article-card";
 import { MediaPlaceholder } from "@/designSystem/components/media-placeholder";
-import { articles, partners } from "@/lib/site-data";
+import { Pager } from "@/designSystem/components/pager";
+import { formatDate, getAllPosts, getTotalPages } from "@/lib/posts";
 
 export default function HomePage() {
-  const hero = articles[0];
-  const latest = articles.slice(1, 10);
+  const all = getAllPosts();
+
+  if (all.length === 0) {
+    return (
+      <div className="rounded-hh-l bg-white px-8 py-16 text-center shadow-hh-20">
+        <h2 className="mb-2 text-xl font-semibold text-hh-text-emphasize">
+          還沒有文章
+        </h2>
+        <p className="text-sm text-hh-text-secondary">
+          在 content/posts/ 新增 .mdx 檔案後，文章就會出現在這裡。
+        </p>
+      </div>
+    );
+  }
+
+  const hero = all[0];
+  const latest = all.slice(1, 10);
   const heroMore = hero.tags.length - 2;
 
   return (
@@ -42,32 +58,12 @@ export default function HomePage() {
           </div>
           <div className="flex items-center gap-3.5">
             <span className="h-[3px] w-[30px] rounded-sm bg-hh-primary" />
-            <span className="text-sm text-white/85">{hero.date}</span>
+            <span className="text-sm text-white/85">
+              {formatDate(hero.date)}
+            </span>
           </div>
         </div>
       </Link>
-
-      {/* Partners marquee */}
-      <section className="mt-10">
-        <div className="mb-3.5 flex items-center gap-2">
-          <span className="h-[7px] w-[7px] rounded-full bg-hh-primary" />
-          <span className="text-sm font-semibold text-hh-text-primary">
-            合作夥伴
-          </span>
-        </div>
-        <div className="overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_6%,#000_94%,transparent)]">
-          <div className="flex w-max [animation:marquee_32s_linear_infinite] gap-4">
-            {[...partners, ...partners].map((name, i) => (
-              <div
-                key={`${name}-${i}`}
-                className="flex h-[60px] w-[170px] flex-none items-center justify-center rounded-hh-m border border-black/[.07] bg-white text-[13px] font-semibold text-hh-text-secondary"
-              >
-                {name}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Latest articles */}
       <section>
@@ -81,63 +77,6 @@ export default function HomePage() {
           {latest.map((article) => (
             <ArticleCard key={article.slug} article={article} />
           ))}
-        </div>
-
-        {/* Pagination */}
-        <div className="mt-10 flex items-center justify-center gap-2">
-          <button
-            type="button"
-            aria-label="上一頁"
-            disabled
-            className="flex h-10 w-10 flex-none items-center justify-center rounded-hh-s border border-black/[.12] bg-white text-hh-text-disabled"
-          >
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M15 6l-6 6 6 6" />
-            </svg>
-          </button>
-          <span className="flex h-10 min-w-10 flex-none items-center justify-center rounded-hh-s bg-hh-primary text-sm font-semibold text-white">
-            1
-          </span>
-          <Link
-            href="/articles"
-            className="flex h-10 min-w-10 flex-none items-center justify-center rounded-hh-s border border-black/[.12] bg-white text-sm text-hh-text-primary transition-colors hover:bg-hh-primary-tint"
-          >
-            2
-          </Link>
-          <Link
-            href="/articles"
-            className="flex h-10 min-w-10 flex-none items-center justify-center rounded-hh-s border border-black/[.12] bg-white text-sm text-hh-text-primary transition-colors hover:bg-hh-primary-tint"
-          >
-            3
-          </Link>
-          <span className="flex-none px-0.5 text-hh-text-disabled">…</span>
-          <Link
-            href="/articles"
-            aria-label="下一頁"
-            className="flex h-10 w-10 flex-none items-center justify-center rounded-hh-m border border-black/[.12] bg-white text-hh-text-primary transition-colors hover:bg-hh-primary-tint"
-          >
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M9 6l6 6-6 6" />
-            </svg>
-          </Link>
         </div>
       </section>
     </div>

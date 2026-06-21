@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { ArticleCard } from "./article-card";
-import type { Article } from "@/lib/site-data";
+import type { PostMeta } from "@/lib/posts";
 
 const meta: Meta<typeof ArticleCard> = {
   title: "Blog/ArticleCard",
@@ -18,14 +18,14 @@ const meta: Meta<typeof ArticleCard> = {
 export default meta;
 type Story = StoryObj<typeof ArticleCard>;
 
-const base: Article = {
+const base: PostMeta = {
   slug: "reimagine-dev-workflow-with-ai",
   title: "用 AI 重新想像你的開發流程",
-  date: "2026.03.02",
+  date: "2026-03-02",
   tags: ["AI", "SDD"],
   featured: false,
-  words: "4,820",
-  excerpt:
+  published: true,
+  description:
     "把 AI 放進日常開發後，最大的改變不是寫得更快，而是思考的方式變了。本文整理我這半年來的工作流調整。",
 };
 

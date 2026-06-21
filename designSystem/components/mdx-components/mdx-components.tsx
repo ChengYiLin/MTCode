@@ -4,40 +4,48 @@ import Link from "next/link";
 export function getMdxComponents(): MDXComponents {
   return {
     h1: ({ children }) => (
-      <h1 className="mt-8 mb-4 text-3xl font-bold tracking-tight">
+      <h1 className="mt-9 mb-4 text-[28px] font-semibold text-hh-text-emphasize">
         {children}
       </h1>
     ),
     h2: ({ children }) => (
-      <h2 className="mt-8 mb-3 border-b pb-2 text-2xl font-semibold tracking-tight">
+      <h2 className="mt-9 mb-4 text-2xl font-semibold text-hh-text-emphasize">
         {children}
       </h2>
     ),
     h3: ({ children }) => (
-      <h3 className="mt-6 mb-2 text-xl font-semibold">{children}</h3>
+      <h3 className="mt-[30px] mb-3.5 text-xl font-semibold text-hh-text-emphasize">
+        {children}
+      </h3>
     ),
     p: ({ children }) => (
-      <p className="mb-4 leading-7 not-first:mt-2">{children}</p>
+      <p className="mb-[22px] text-[17px] leading-[1.9] text-hh-text-primary">
+        {children}
+      </p>
     ),
     ul: ({ children }) => (
-      <ul className="mb-4 ml-6 list-disc space-y-1">{children}</ul>
+      <ul className="mb-[22px] list-disc pl-[22px] text-[17px] leading-[1.9] text-hh-text-primary">
+        {children}
+      </ul>
     ),
     ol: ({ children }) => (
-      <ol className="mb-4 ml-6 list-decimal space-y-1">{children}</ol>
+      <ol className="mb-[22px] list-decimal pl-[22px] text-[17px] leading-[1.9] text-hh-text-primary">
+        {children}
+      </ol>
     ),
-    li: ({ children }) => <li className="leading-7">{children}</li>,
+    li: ({ children }) => <li className="mb-2.5">{children}</li>,
     blockquote: ({ children }) => (
-      <blockquote className="my-4 border-l-4 border-border pl-4 text-muted-foreground italic">
+      <blockquote className="my-[22px] border-l-4 border-hh-primary pl-4 text-hh-text-secondary italic">
         {children}
       </blockquote>
     ),
     code: ({ children }) => (
-      <code className="relative rounded bg-muted px-1.5 py-0.5 font-mono text-sm">
+      <code className="rounded-hh-s bg-hh-surface-neutral px-1.5 py-0.5 font-mono text-[15px] text-[#d4380d]">
         {children}
       </code>
     ),
     pre: ({ children }) => (
-      <pre className="my-4 overflow-x-auto rounded-lg bg-muted p-4 font-mono text-sm">
+      <pre className="my-[26px] overflow-x-auto rounded-[10px] bg-hh-ink-dark px-5 py-[18px] font-mono text-sm leading-[1.7] text-[#e6e6e6] [&>code]:bg-transparent [&>code]:p-0 [&>code]:text-[#e6e6e6]">
         {children}
       </pre>
     ),
@@ -49,7 +57,7 @@ export function getMdxComponents(): MDXComponents {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="underline underline-offset-4 transition-colors hover:text-primary"
+            className="text-hh-primary underline underline-offset-4 transition-colors hover:text-hh-primary-hover"
           >
             {children}
           </a>
@@ -58,12 +66,12 @@ export function getMdxComponents(): MDXComponents {
       return (
         <Link
           href={href ?? "#"}
-          className="underline underline-offset-4 transition-colors hover:text-primary"
+          className="text-hh-primary underline underline-offset-4 transition-colors hover:text-hh-primary-hover"
         >
           {children}
         </Link>
       );
     },
-    hr: () => <hr className="my-8 border-border" />,
+    hr: () => <hr className="border-hh-border-subdued my-8" />,
   };
 }
